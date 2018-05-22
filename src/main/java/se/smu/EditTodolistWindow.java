@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class EditTodolistWindow extends JFrame{
 	private Font f = new Font("µ¸¿ò", Font.BOLD, 20);
-	private Font f2 = new Font("µ¸¿ò", Font.BOLD, 9);
+	//private Font f2 = new Font("µ¸¿ò", Font.BOLD, 9);
 	
 	public EditTodolistWindow() {
 		setTitle("To do list");
@@ -100,7 +100,7 @@ public class EditTodolistWindow extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		EditTodolistWindow editTodolistWindow = new EditTodolistWindow();
+		//EditTodolistWindow editTodolistWindow = new EditTodolistWindow();
 	}
 
 }

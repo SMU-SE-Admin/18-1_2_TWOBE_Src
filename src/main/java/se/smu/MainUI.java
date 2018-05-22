@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class MainUI extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
-	private Font f2 = new Font("돋움", Font.BOLD, 9);
+	//private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
 	public MainUI() {
 		setTitle("To do list");
@@ -143,7 +143,7 @@ public class MainUI extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		MainUI mainUi = new MainUI();
+		//MainUI mainUi = new MainUI();
 	}
 
 }

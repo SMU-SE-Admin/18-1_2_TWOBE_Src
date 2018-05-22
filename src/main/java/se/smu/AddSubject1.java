@@ -44,7 +44,7 @@ public class AddSubject1 extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		AddSubject1 addSubject1 = new AddSubject1();
+		//AddSubject1 addSubject1 = new AddSubject1();
 	}
 
 }

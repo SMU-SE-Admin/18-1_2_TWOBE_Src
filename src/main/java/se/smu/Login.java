@@ -71,7 +71,7 @@ public class Login extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		Login login = new Login();
+		//Login login = new Login();
 	}
 
 }

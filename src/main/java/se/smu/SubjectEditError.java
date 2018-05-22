@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class SubjectEditError extends JFrame{
-	private Font f = new Font("돋움", Font.BOLD, 20);
+	//private Font f = new Font("돋움", Font.BOLD, 20);
 	
 	public SubjectEditError() {
 		setTitle("실행 오류");
@@ -41,7 +41,7 @@ public class SubjectEditError extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		SubjectEditError subjectEditError = new SubjectEditError();
+		//SubjectEditError subjectEditError = new SubjectEditError();
 	}
 
 }

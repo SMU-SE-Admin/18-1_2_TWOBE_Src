@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class AddSubjectWindow extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
-	private Font f2 = new Font("돋움", Font.BOLD, 9);
+	//private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
 	public AddSubjectWindow() {
 		setTitle("To do list");
@@ -112,7 +112,7 @@ public class AddSubjectWindow extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		AddSubjectWindow addSubjectWindow = new AddSubjectWindow();
+		//AddSubjectWindow addSubjectWindow = new AddSubjectWindow();
 	}
 
 }

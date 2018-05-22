@@ -42,7 +42,7 @@ public class AddSubjectConfirm extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		AddSubjectConfirm addSubjectConfirm = new AddSubjectConfirm();
+		//AddSubjectConfirm addSubjectConfirm = new AddSubjectConfirm();
 	}
 
 }

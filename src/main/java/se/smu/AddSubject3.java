@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class AddSubject3 extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
-	private Font f2 = new Font("돋움", Font.BOLD, 9);
+	//private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
 	public AddSubject3() {
 		setTitle("To do list");
@@ -126,7 +126,7 @@ public class AddSubject3 extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		AddSubject3 addSubject3 = new AddSubject3();
+		//AddSubject3 addSubject3 = new AddSubject3();
 	}
 
 }

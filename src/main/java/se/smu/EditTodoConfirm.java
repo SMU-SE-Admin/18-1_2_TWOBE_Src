@@ -41,7 +41,7 @@ public class EditTodoConfirm extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		EditTodoConfirm editTodoConfirm = new EditTodoConfirm();
+		//EditTodoConfirm editTodoConfirm = new EditTodoConfirm();
 	}
 
 }

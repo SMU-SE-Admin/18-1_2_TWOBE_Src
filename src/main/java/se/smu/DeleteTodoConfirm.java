@@ -42,7 +42,7 @@ public class DeleteTodoConfirm extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		DeleteTodoConfirm deleteTodoConfirm = new DeleteTodoConfirm();
+		//DeleteTodoConfirm deleteTodoConfirm = new DeleteTodoConfirm();
 	}
 
 }

@@ -43,7 +43,7 @@ public class EditSubjectConfirm extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		EditSubjectConfirm editSubjectConfirm = new EditSubjectConfirm();
+		//EditSubjectConfirm editSubjectConfirm = new EditSubjectConfirm();
 	}
 
 }

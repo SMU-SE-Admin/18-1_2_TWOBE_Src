@@ -211,7 +211,7 @@ public class AddSubject2 extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		AddSubject2 addSubject2 = new AddSubject2();
+		//AddSubject2 addSubject2 = new AddSubject2();
 	}
 
 }

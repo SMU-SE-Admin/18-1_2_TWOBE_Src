@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class TodoEditError extends JFrame{
-	private Font f = new Font("돋움", Font.BOLD, 20);
+	//private Font f = new Font("돋움", Font.BOLD, 20);
 	
 	public TodoEditError() {
 		setTitle("실행 오류");
@@ -41,7 +41,7 @@ public class TodoEditError extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		TodoEditError todoEditError = new TodoEditError();
+		//TodoEditError todoEditError = new TodoEditError();
 	}
 
 }

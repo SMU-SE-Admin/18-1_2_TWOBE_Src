@@ -42,7 +42,7 @@ public class AddTodoConfirm extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		AddTodoConfirm addTodoConfirm = new AddTodoConfirm();
+		//AddTodoConfirm addTodoConfirm = new AddTodoConfirm();
 	}
 
 }

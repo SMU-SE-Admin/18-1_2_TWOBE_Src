@@ -42,7 +42,7 @@ public class DeleteSubjectConfirm extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		DeleteSubjectConfirm deleteSubjectConfirm = new DeleteSubjectConfirm();
+		//DeleteSubjectConfirm deleteSubjectConfirm = new DeleteSubjectConfirm();
 	}
 
 }
