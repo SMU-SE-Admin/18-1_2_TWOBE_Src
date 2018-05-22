@@ -39,6 +39,7 @@ public class EditSubjectConfirm extends JFrame{
 		
 		setSize(520, 290);
 		setVisible(true);
+		
 	}
 	
 	public static void main(String[] args) {

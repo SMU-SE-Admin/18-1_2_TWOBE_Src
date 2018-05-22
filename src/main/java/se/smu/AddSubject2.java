@@ -207,6 +207,7 @@ public class AddSubject2 extends JFrame{
 
 		setSize(1080, 720);
 		setVisible(true);
+		
 	}
 	
 	public static void main(String[] args) {

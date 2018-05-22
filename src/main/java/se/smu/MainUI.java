@@ -21,8 +21,7 @@ public class MainUI extends JFrame{
 		wl.setSize(1080, 3);
 		wl.setLocation(0,60);
 		wl.setBackground(new Color(255,255,255));
-		
-		
+				
 		JLabel title = new JLabel("To - Do List");
 		c.add(title);
 		title.setLocation(430, 12);

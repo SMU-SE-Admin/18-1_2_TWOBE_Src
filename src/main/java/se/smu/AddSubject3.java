@@ -22,7 +22,6 @@ public class AddSubject3 extends JFrame{
 		wl.setLocation(0,60);
 		wl.setBackground(new Color(255,255,255));
 		
-		
 		JLabel title = new JLabel("수강과목 등록(課程註冊)");
 		c.add(title);
 		title.setLocation(430, 12);

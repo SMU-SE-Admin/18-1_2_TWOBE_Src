@@ -36,7 +36,6 @@ public class SubjectEditError extends JFrame{
 		em3.setLocation(155, 95);
 		em3.setSize(150, 50);
 		
-
 		setSize(360, 180);
 		setVisible(true);
 	}

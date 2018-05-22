@@ -42,7 +42,6 @@ public class Login extends JFrame{
 		c.add(btn1);
 		c.add(btn2);
 		c.add(btn3);
-
 		
 		title.setLocation(200, 12);
 		title.setSize(150,40);

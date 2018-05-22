@@ -14,8 +14,7 @@ public class EditTodoConfirm extends JFrame{
 		Container c = getContentPane();
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
-		
-	
+			
 		JLabel title = new JLabel("To-do 항목을 편집하시겠습니까?");
 		c.add(title);
 		title.setLocation(100, 40);

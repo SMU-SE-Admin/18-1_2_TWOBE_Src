@@ -28,8 +28,7 @@ public class EditTodolistWindow extends JFrame{
 		title.setSize(350,40);
 		title.setFont(f);
 		
-		
-		
+				
 		JLabel todoName = new JLabel("Ç×¸ñÀÌ¸§(ú£ÙÍÙ£öà)");
 		todoName.setLocation(100,70);
 		todoName.setSize(150,40);

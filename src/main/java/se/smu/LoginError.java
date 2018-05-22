@@ -38,6 +38,7 @@ public class LoginError extends JFrame{
 
 		setSize(360, 180);
 		setVisible(true);
+		
 	}
 	
 	public static void main(String[] args) {

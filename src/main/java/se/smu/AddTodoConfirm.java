@@ -25,7 +25,6 @@ public class AddTodoConfirm extends JFrame{
 		c.add(title2);
 		title2.setLocation(180, 80);
 		title2.setSize(350,40);
-
 		
 		JButton btn1 = new JButton("네(是)");
 		JButton btn2 = new JButton("아니오(沒有)");

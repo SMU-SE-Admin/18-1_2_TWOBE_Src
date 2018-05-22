@@ -28,8 +28,7 @@ public class AddSubjectWindow extends JFrame{
 		title.setSize(350,40);
 		title.setFont(f);
 		
-		
-		
+				
 		JLabel subjectName = new JLabel("과목이름(課程名稱)");
 		subjectName.setLocation(100,70);
 		subjectName.setSize(150,40);
