@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class AddSubject2 extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
-	private Font f2 = new Font("돋움", Font.BOLD, 9);
+	//private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
 	public AddSubject2() {
 		setTitle("To do list");
