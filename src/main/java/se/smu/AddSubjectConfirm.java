@@ -1,9 +1,6 @@
 package se.smu;
 import javax.swing.*;
 import javax.swing.event.*;
-
-import ver2.ConfirmDp;
-
 import java.awt.*;
 import java.awt.event.*;
 
