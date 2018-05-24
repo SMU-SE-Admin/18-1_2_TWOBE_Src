@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class EditSubjectWindow extends JFrame{
 	public static void main(String[] args) {
-		SubjectWDP addSubjectWindow = new SubjectWDP("수강과목 편집 (課程編輯)", "편집(彙編)");
+		//SubjectWDP editSubjectWindow = new SubjectWDP("수강과목 편집 (課程編輯)", "편집(彙編)");
 	}
 
 }
