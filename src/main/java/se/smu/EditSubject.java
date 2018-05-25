@@ -1,35 +1,34 @@
 package se.smu;
 
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 public class EditSubject {
-	public static void main(String[] args) throws IOException {
+	public static Subject[] edit(String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester,Subject[] arr,int count,String subUrl,String oldsub){
+		Subject sj = new Subject(subjectName,professer,subjectDay,subjectTime,runYear,semester);
+		int index = 0;
 		
-		BufferedReader bw = new BufferedReader(new InputStreamReader(System.in));
-		File file = new File("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubject.txt");
-		BufferedReader reader = new BufferedReader(new FileReader(file));
-		String line="";
-
-		System.out.print("수정하려는 정보 : ");
-		String del=bw.readLine();
-
-		while((line = reader.readLine()) != null)
-			if(line.contains(del)) {
-				System.out.print(line);
+		while(true){
+			if(arr[index].getSubjectName().equals(oldsub)){
+				arr[index]=sj;
+				break;
 			}
-
-
-		System.out.print("수정된 정보 : " );
-		String replacement=bw.readLine();
-
-
-		if(line.contains(del)) {
-			line= replacement.replace(del,line);
+			index++;
 		}
-
-		FileWriter writer = new FileWriter("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubjectafter.txt");
-		writer.write(line);
-		reader.close();
-		writer.close();
+		try{
+			// 수정된 배열을 파일에 통째로 덮어씌움
+			ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(subUrl));
+			
+			for (int j=0;j<count;j++){
+				writer.writeObject(arr[j]);
+			}
+			
+			writer.close();	
+						
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	
+		return arr;
 	}
 }
