@@ -70,7 +70,6 @@ class Login extends JFrame{
 		btn3.setSize(120,20);
 		
 
-
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MainUI m; //1
