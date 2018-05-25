@@ -22,6 +22,12 @@ public class Student{
 	public void edit_sub(String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester,String oldsub){
 		EditSubject.edit(subjectName,professer,subjectDay,subjectTime,runYear,semester,this.s_arr,this.s_arrcount,this.subUrl,oldsub);
 	}
+	public void del_sub(String subUrl,Subject[] arr ,int count,String del_subname){
+		this.s_arr=DeleteSubject.delete(this.subUrl, this.s_arr, this.s_arrcount, del_subname);
+		this.s_arrcount--;
+		return;
+		
+	}
 	
 	public void add_tdl(String s){
 		Todolist todo = Todo_AddTodolist.add(this.tdlUrl,s);
