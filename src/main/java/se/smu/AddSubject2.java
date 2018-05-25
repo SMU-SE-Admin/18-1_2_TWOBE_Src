@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class AddSubject2 extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
-	//private Font f2 = new Font("돋움", Font.BOLD, 9);
+	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
 	public AddSubject2() {
 		setTitle("To do list");
@@ -199,19 +199,126 @@ public class AddSubject2 extends JFrame{
 		subjectSem4.setBackground(new Color(255,255,255));
 		c.add(subjectSem4);
 		
+		JButton subjectedit5 = new JButton("편집(汇编)");
+		c.add(subjectedit5);
+		subjectedit5.setLocation(10,530);
+		subjectedit5.setSize(95,40);
+		subjectedit5.setBackground(new Color(255,255,255));		
+		JButton subjectdel5 = new JButton("삭제(删除)");
+		c.add(subjectdel5);
+		subjectdel5.setLocation(115,530);
+		subjectdel5.setSize(95,40);
+		subjectdel5.setBackground(new Color(255,255,255));
+		JButton subjectadd5 = new JButton("To-do 등록(注册)");
+		c.add(subjectadd5);
+		subjectadd5.setLocation(220,530);
+		subjectadd5.setSize(130,40);
+		subjectadd5.setBackground(new Color(255,255,255));
+		JTextField subjectProf5 = new JTextField();
+		subjectProf5.setLocation(360,530);
+		subjectProf5.setSize(150,40);
+		subjectProf5.setBackground(new Color(255,255,255));
+		c.add(subjectProf5);
+		JTextField subjectName5 = new JTextField();
+		subjectName5.setLocation(530,530);
+		subjectName5.setSize(200,40);
+		subjectName5.setBackground(new Color(255,255,255));
+		c.add(subjectName5);
+		JTextField subjectDay5 = new JTextField();
+		subjectDay5.setLocation(750,530);
+		subjectDay5.setSize(130,40);
+		subjectDay5.setBackground(new Color(255,255,255));
+		c.add(subjectDay5);
+		JTextField subjectSem5 = new JTextField();
+		subjectSem5.setLocation(900,530);
+		subjectSem5.setSize(130,40);
+		subjectSem5.setBackground(new Color(255,255,255));
+		c.add(subjectSem5);
+		
+		JButton subjectedit6 = new JButton("편집(汇编)");
+		c.add(subjectedit6);
+		subjectedit6.setLocation(10,630);
+		subjectedit6.setSize(95,40);
+		subjectedit6.setBackground(new Color(255,255,255));		
+		JButton subjectdel6 = new JButton("삭제(删除)");
+		c.add(subjectdel6);
+		subjectdel6.setLocation(115,630);
+		subjectdel6.setSize(95,40);
+		subjectdel6.setBackground(new Color(255,255,255));
+		JButton subjectadd6 = new JButton("To-do 등록(注册)");
+		c.add(subjectadd6);
+		subjectadd6.setLocation(220,630);
+		subjectadd6.setSize(130,40);
+		subjectadd6.setBackground(new Color(255,255,255));
+		JTextField subjectProf6 = new JTextField();
+		subjectProf6.setLocation(360,630);
+		subjectProf6.setSize(150,40);
+		subjectProf6.setBackground(new Color(255,255,255));
+		c.add(subjectProf6);
+		JTextField subjectName6 = new JTextField();
+		subjectName6.setLocation(530,630);
+		subjectName6.setSize(200,40);
+		subjectName6.setBackground(new Color(255,255,255));
+		c.add(subjectName6);
+		JTextField subjectDay6 = new JTextField();
+		subjectDay6.setLocation(750,630);
+		subjectDay6.setSize(130,40);
+		subjectDay6.setBackground(new Color(255,255,255));
+		c.add(subjectDay6);
+		JTextField subjectSem6 = new JTextField();
+		subjectSem6.setLocation(900,630);
+		subjectSem6.setSize(130,40);
+		subjectSem6.setBackground(new Color(255,255,255));
+		c.add(subjectSem6);
+		
+		JButton subjectedit7 = new JButton("편집(汇编)");
+		c.add(subjectedit7);
+		subjectedit7.setLocation(10,730);
+		subjectedit7.setSize(95,40);
+		subjectedit7.setBackground(new Color(255,255,255));		
+		JButton subjectdel7 = new JButton("삭제(删除)");
+		c.add(subjectdel7);
+		subjectdel7.setLocation(115,730);
+		subjectdel7.setSize(95,40);
+		subjectdel7.setBackground(new Color(255,255,255));
+		JButton subjectadd7 = new JButton("To-do 등록(注册)");
+		c.add(subjectadd7);
+		subjectadd7.setLocation(220,730);
+		subjectadd7.setSize(130,40);
+		subjectadd7.setBackground(new Color(255,255,255));
+		JTextField subjectProf7 = new JTextField();
+		subjectProf7.setLocation(360,730);
+		subjectProf7.setSize(150,40);
+		subjectProf7.setBackground(new Color(255,255,255));
+		c.add(subjectProf7);
+		JTextField subjectName7 = new JTextField();
+		subjectName7.setLocation(530,730);
+		subjectName7.setSize(200,40);
+		subjectName7.setBackground(new Color(255,255,255));
+		c.add(subjectName7);
+		JTextField subjectDay7 = new JTextField();
+		subjectDay7.setLocation(750,730);
+		subjectDay7.setSize(130,40);
+		subjectDay7.setBackground(new Color(255,255,255));
+		c.add(subjectDay7);
+		JTextField subjectSem7 = new JTextField();
+		subjectSem7.setLocation(900,730);
+		subjectSem7.setSize(130,40);
+		subjectSem7.setBackground(new Color(255,255,255));
+		c.add(subjectSem7);
+		
 		JButton subjectplus = new JButton("+");
 		c.add(subjectplus);
-		subjectplus.setLocation(10,530);
+		subjectplus.setLocation(10,830);
 		subjectplus.setBackground(new Color(255,255,255));
 		subjectplus.setSize(95,40);
 
-		setSize(1080, 720);
+		setSize(1080, 960);
 		setVisible(true);
-		
 	}
 	
 	public static void main(String[] args) {
 		//AddSubject2 addSubject2 = new AddSubject2();
 	}
-
+//
 }
