@@ -128,19 +128,95 @@ public class MainUI extends JFrame{
 		text3.setLocation(350, 396);
 		text3.setSize(600,50);
 		
+		JButton todoedit4 = new JButton("편집(汇编)");
+		c.add(todoedit4);
+		todoedit4.setLocation(10,500);
+		todoedit4.setSize(95,40);
+		todoedit4.setBackground(new Color(255,255,255));		
+		JButton tododel4 = new JButton("삭제(删除)");
+		c.add(tododel4);
+		tododel4.setLocation(130,500);
+		tododel4.setSize(95,40);
+		tododel4.setBackground(new Color(255,255,255));
+		JLabel label4 = new JLabel(image, SwingConstants.CENTER);
+		c.add(label4);
+		label4.setLocation(240, 496);
+		label4.setSize(50,50);
+		JTextField text4 = new JTextField();
+		c.add(text4);
+		text4.setLocation(350, 496);
+		text4.setSize(600,50);
+		
+		JButton todoedit5 = new JButton("편집(汇编)");
+		c.add(todoedit5);
+		todoedit5.setLocation(10,600);
+		todoedit5.setSize(95,40);
+		todoedit5.setBackground(new Color(255,255,255));		
+		JButton tododel5 = new JButton("삭제(删除)");
+		c.add(tododel5);
+		tododel5.setLocation(130,600);
+		tododel5.setSize(95,40);
+		tododel5.setBackground(new Color(255,255,255));
+		JLabel label5 = new JLabel(image, SwingConstants.CENTER);
+		c.add(label5);
+		label5.setLocation(240, 596);
+		label5.setSize(50,50);
+		JTextField text5 = new JTextField();
+		c.add(text5);
+		text5.setLocation(350, 596);
+		text5.setSize(600,50);
+		
+		JButton todoedit6 = new JButton("편집(汇编)");
+		c.add(todoedit6);
+		todoedit6.setLocation(10,700);
+		todoedit6.setSize(95,40);
+		todoedit6.setBackground(new Color(255,255,255));		
+		JButton tododel6 = new JButton("삭제(删除)");
+		c.add(tododel6);
+		tododel6.setLocation(130,700);
+		tododel6.setSize(95,40);
+		tododel6.setBackground(new Color(255,255,255));
+		JLabel label6 = new JLabel(image, SwingConstants.CENTER);
+		c.add(label6);
+		label6.setLocation(240, 696);
+		label6.setSize(50,50);
+		JTextField text6 = new JTextField();
+		c.add(text6);
+		text6.setLocation(350, 696);
+		text6.setSize(600,50);
+		
+		JButton todoedit7 = new JButton("편집(汇编)");
+		c.add(todoedit7);
+		todoedit7.setLocation(10,800);
+		todoedit7.setSize(95,40);
+		todoedit7.setBackground(new Color(255,255,255));		
+		JButton tododel7 = new JButton("삭제(删除)");
+		c.add(tododel7);
+		tododel7.setLocation(130,800);
+		tododel7.setSize(95,40);
+		tododel7.setBackground(new Color(255,255,255));
+		JLabel label7 = new JLabel(image, SwingConstants.CENTER);
+		c.add(label7);
+		label7.setLocation(240, 796);
+		label7.setSize(50,50);
+		JTextField text7 = new JTextField();
+		c.add(text7);
+		text7.setLocation(350, 796);
+		text7.setSize(600,50);
+		
 		JCheckBox hideTodo = new JCheckBox("  완료된 To do 항목 숨기기");
 		c.add(hideTodo);
-		hideTodo.setLocation(850, 580);
+		hideTodo.setLocation(850, 850);
 		hideTodo.setSize(200, 50);
 		hideTodo.setBackground(new Color(184,255,255));
 		
 		JLabel hideTodo2 = new JLabel("(已完成 To-do list 藏)");
 		c.add(hideTodo2);
-		hideTodo2.setLocation(890, 610);
+		hideTodo2.setLocation(890, 880);
 		hideTodo2.setSize(300,50);
 		
 		
-		setSize(1080, 720);
+		setSize(1080, 960);
 		setVisible(true);
 	}
 	
