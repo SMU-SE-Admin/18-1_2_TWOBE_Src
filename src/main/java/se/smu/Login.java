@@ -4,14 +4,18 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Login extends JFrame{
+
+class Login extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
+	private Container c;
+	String stdNum="201411096";
+	String password="10301030";
 	
 	public Login() {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		Container c = getContentPane();
+        c = getContentPane();
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
 		
@@ -42,6 +46,7 @@ public class Login extends JFrame{
 		c.add(btn1);
 		c.add(btn2);
 		c.add(btn3);
+
 		
 		title.setLocation(200, 12);
 		title.setSize(150,40);
@@ -64,6 +69,19 @@ public class Login extends JFrame{
 		btn3.setLocation(380,300);
 		btn3.setSize(120,20);
 		
+
+
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainUI m; //1
+				JButton btn2 = (JButton)e.getSource();
+				if(studentNum3.getText().equals("201411096") && password3.getText().equals("10301030")) {      
+					m = new MainUI(); //2
+					dispose();		      
+				}
+			}
+		});
+
 		title.setFont(f);
 		
 		setSize(520, 390);
@@ -71,7 +89,8 @@ public class Login extends JFrame{
 	}
 	
 	public static void main(String[] args) {
-		//Login login = new Login();
+		Login login = new Login();
 	}
 
 }
+
