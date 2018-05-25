@@ -39,6 +39,19 @@ public class LoginError extends JFrame{
 		setSize(360, 180);
 		setVisible(true);
 		
+		ob.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainUI m; //1
+				LoginError l;
+				JButton btn2 = (JButton)e.getSource();
+				
+				if(true) {
+					dispose();		      
+				}
+
+			}
+		});
+		
 	}
 	
 	public static void main(String[] args) {

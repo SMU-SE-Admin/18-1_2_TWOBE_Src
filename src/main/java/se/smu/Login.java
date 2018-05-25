@@ -73,11 +73,15 @@ class Login extends JFrame{
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MainUI m; //1
+				LoginError l;
 				JButton btn2 = (JButton)e.getSource();
 				
 				if(studentNum3.getText().equals("201411096") && password3.getText().equals("10301030")) {      
 					m = new MainUI(); //2
 					dispose();		      
+				}
+				else {
+					l = new LoginError();
 				}
 			}
 		});
