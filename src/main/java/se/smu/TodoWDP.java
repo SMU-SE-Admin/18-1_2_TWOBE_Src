@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package se.smu;
 import javax.swing.*;
 import javax.swing.event.*;
@@ -6,8 +6,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class TodoWDP extends JFrame{
-	private Font f = new Font("����", Font.BOLD, 20);
-	private Font f2 = new Font("����", Font.BOLD, 9);
+	private Font f = new Font("돋움", Font.BOLD, 20);
+	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
 	public TodoWDP(String str1, String str2) {
 		setTitle("To do list");
@@ -30,7 +30,7 @@ public class TodoWDP extends JFrame{
 		title.setFont(f);
 		
 				
-		JLabel todoName = new JLabel("�׸��̸�(����٣��)");
+		JLabel todoName = new JLabel("항목이름(項目名稱)");
 		todoName.setLocation(100,70);
 		todoName.setSize(150,40);
 		todoName.setBackground(new Color(255,255,255));
@@ -41,7 +41,7 @@ public class TodoWDP extends JFrame{
 		todoName2.setBackground(new Color(255,255,255));
 		c.add(todoName2);
 		
-		JLabel todoDeadline = new JLabel("��������(Ѣ��)");
+		JLabel todoDeadline = new JLabel("마감기한(期限)");
 		todoDeadline.setLocation(100,120);
 		todoDeadline.setSize(150,40);
 		todoDeadline.setBackground(new Color(255,255,255));
@@ -52,7 +52,7 @@ public class TodoWDP extends JFrame{
 		todoDeadline2.setBackground(new Color(255,255,255));
 		c.add(todoDeadline2);
 
-		JLabel todoFinishDate = new JLabel("����������(�������Ѣ)");
+		JLabel todoFinishDate = new JLabel("실제마감일(實際截止日期)");
 		todoFinishDate.setLocation(100,170);
 		todoFinishDate.setSize(250,40);
 		todoFinishDate.setBackground(new Color(255,255,255));
@@ -63,7 +63,7 @@ public class TodoWDP extends JFrame{
 		todoFinishDate2.setBackground(new Color(255,255,255));
 		c.add(todoFinishDate2);
 		
-		JLabel todoCompleted = new JLabel("�ϷῩ��(��������)");
+		JLabel todoCompleted = new JLabel("완료여부(狀態完成)");
 		todoCompleted.setLocation(100,220);
 		todoCompleted.setSize(150,40);
 		todoCompleted.setBackground(new Color(255,255,255));
@@ -74,7 +74,7 @@ public class TodoWDP extends JFrame{
 		todoCompleted2.setBackground(new Color(255,255,255));
 		c.add(todoCompleted2);
 		
-		JLabel todoImportant = new JLabel("�߿俩��(���)");
+		JLabel todoImportant = new JLabel("중요여부(也罷)");
 		todoImportant.setLocation(100,270);
 		todoImportant.setSize(150,40);
 		todoImportant.setBackground(new Color(255,255,255));
@@ -90,7 +90,7 @@ public class TodoWDP extends JFrame{
 		todoConfirm.setLocation(820,360);
 		todoConfirm.setBackground(new Color(255,255,255));
 		todoConfirm.setSize(120,40);
-		JButton todoCancel = new JButton("���(���)");
+		JButton todoCancel = new JButton("취소(取消)");
 		c.add(todoCancel);
 		todoCancel.setLocation(940,360);
 		todoCancel.setBackground(new Color(255,255,255));
@@ -114,8 +114,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class TodoWDP extends JFrame{
-	private Font f = new Font("����", Font.BOLD, 20);
-	private Font f2 = new Font("����", Font.BOLD, 9);
+	private Font f = new Font("占쏙옙占쏙옙", Font.BOLD, 20);
+	private Font f2 = new Font("占쏙옙占쏙옙", Font.BOLD, 9);
 	
 	public TodoWDP(String str1, String str2) {
 		setTitle("To do list");
@@ -138,7 +138,7 @@ public class TodoWDP extends JFrame{
 		title.setFont(f);
 		
 				
-		JLabel todoName = new JLabel("�׸��̸�(����٣��)");
+		JLabel todoName = new JLabel("占쌓몌옙占싱몌옙(占쏙옙占쏙옙名占쏙옙)");
 		todoName.setLocation(100,70);
 		todoName.setSize(150,40);
 		todoName.setBackground(new Color(255,255,255));
@@ -149,7 +149,7 @@ public class TodoWDP extends JFrame{
 		todoName2.setBackground(new Color(255,255,255));
 		c.add(todoName2);
 		
-		JLabel todoDeadline = new JLabel("��������(Ѣ��)");
+		JLabel todoDeadline = new JLabel("占쏙옙占쏙옙占쏙옙占쏙옙(期占쏙옙)");
 		todoDeadline.setLocation(100,120);
 		todoDeadline.setSize(150,40);
 		todoDeadline.setBackground(new Color(255,255,255));
@@ -160,7 +160,7 @@ public class TodoWDP extends JFrame{
 		todoDeadline2.setBackground(new Color(255,255,255));
 		c.add(todoDeadline2);
 
-		JLabel todoFinishDate = new JLabel("����������(�������Ѣ)");
+		JLabel todoFinishDate = new JLabel("占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙(占쏙옙占쏙옙占쏙옙占싼�)");
 		todoFinishDate.setLocation(100,170);
 		todoFinishDate.setSize(250,40);
 		todoFinishDate.setBackground(new Color(255,255,255));
@@ -171,7 +171,7 @@ public class TodoWDP extends JFrame{
 		todoFinishDate2.setBackground(new Color(255,255,255));
 		c.add(todoFinishDate2);
 		
-		JLabel todoCompleted = new JLabel("�ϷῩ��(��������)");
+		JLabel todoCompleted = new JLabel("占싹료여占쏙옙(占쏙옙占쏙옙占쏙옙占쏙옙)");
 		todoCompleted.setLocation(100,220);
 		todoCompleted.setSize(150,40);
 		todoCompleted.setBackground(new Color(255,255,255));
@@ -182,7 +182,7 @@ public class TodoWDP extends JFrame{
 		todoCompleted2.setBackground(new Color(255,255,255));
 		c.add(todoCompleted2);
 		
-		JLabel todoImportant = new JLabel("�߿俩��(���)");
+		JLabel todoImportant = new JLabel("占쌩요여占쏙옙(占쏙옙占�)");
 		todoImportant.setLocation(100,270);
 		todoImportant.setSize(150,40);
 		todoImportant.setBackground(new Color(255,255,255));
@@ -198,7 +198,7 @@ public class TodoWDP extends JFrame{
 		todoConfirm.setLocation(820,360);
 		todoConfirm.setBackground(new Color(255,255,255));
 		todoConfirm.setSize(120,40);
-		JButton todoCancel = new JButton("���(���)");
+		JButton todoCancel = new JButton("占쏙옙占�(占쏙옙占�)");
 		c.add(todoCancel);
 		todoCancel.setLocation(940,360);
 		todoCancel.setBackground(new Color(255,255,255));
@@ -213,4 +213,4 @@ public class TodoWDP extends JFrame{
 	}
 
 }
->>>>>>> branch 'master' of https://github.com/SMU-SE-Admin/18-1_2_TWOBE_Src.git
+
