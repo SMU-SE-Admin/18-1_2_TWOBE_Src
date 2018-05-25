@@ -216,6 +216,7 @@ public class MainUI extends JFrame{
 		hideTodo2.setSize(300,50);
 		
 		
+		
 		setSize(1080, 960);
 		setVisible(true);
 	}
