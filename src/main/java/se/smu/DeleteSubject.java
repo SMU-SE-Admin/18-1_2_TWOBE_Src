@@ -4,17 +4,17 @@ import java.io.*;
 
 public class DeleteSubject {
     public static void main(String[] args) throws IOException {
-        //»èÁ¦µÈ ÈÄÀÇ »ç¿ëÀÚÀÇ ¼ö°­°ú¸ñ ¸ñ·Ï
-        PrintWriter pw = new PrintWriter("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubjectafter.txt"); //ÆÄÀÏ °æ·Î
-        //»èÁ¦µÇ±â ÀüÀÇ »ç¿ëÀÚÀÇ ¼ö°­°ú¸ñ ¸ñ·Ï
-        BufferedReader br1 = new BufferedReader(new FileReader("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubject.txt")); //ÆÄÀÏ °æ·Î
+        //ì‚­ì œëœ í›„ì˜ ì‚¬ìš©ìì˜ ìˆ˜ê°•ê³¼ëª© ëª©ë¡
+        PrintWriter pw = new PrintWriter("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubjectafter.txt"); //íŒŒì¼ ê²½ë¡œ
+        //ì‚­ì œë˜ê¸° ì „ì˜ ì‚¬ìš©ìì˜ ìˆ˜ê°•ê³¼ëª© ëª©ë¡
+        BufferedReader br1 = new BufferedReader(new FileReader("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubject.txt")); //íŒŒì¼ ê²½ë¡œ
         String line1 = br1.readLine();
-        //»èÁ¦µÇ±â ÀüÀÇ »ç¿ëÀÚÀÇ ¼ö°­°ú¸ñ ·çÇÁ
+        //ì‚­ì œë˜ê¸° ì „ì˜ ì‚¬ìš©ìì˜ ìˆ˜ê°•ê³¼ëª© ë£¨í”„
         while(line1 != null)
         {
             boolean flag = false;
-            // »èÁ¦ÇÏ·Á´Â ¼ö°­°ú¸ñ
-            BufferedReader br2 = new BufferedReader(new FileReader("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\delete.txt")); //ÆÄÀÏ °æ·Î
+            // ì‚­ì œí•˜ë ¤ëŠ” ìˆ˜ê°•ê³¼ëª©
+            BufferedReader br2 = new BufferedReader(new FileReader("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\delete.txt")); //íŒŒì¼ ê²½ë¡œ
             String line2 = br2.readLine();
        
             while(line2 != null)
@@ -27,7 +27,7 @@ public class DeleteSubject {
                  
                 line2 = br2.readLine();
             }    
-            // »èÁ¦ÇÏ·Á´Â ¼ö°­°ú¸ñÀÌ »èÁ¦µÇ´Â ºÎºĞ
+            // ì‚­ì œí•˜ë ¤ëŠ” ìˆ˜ê°•ê³¼ëª©ì´ ì‚­ì œë˜ëŠ” ë¶€ë¶„
             if(!flag)
                 pw.println(line1);   
             line1 = br1.readLine();
@@ -36,6 +36,6 @@ public class DeleteSubject {
         br1.close();
         pw.close();
          
-        System.out.println("»èÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+        System.out.println("ì‚­ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
 }

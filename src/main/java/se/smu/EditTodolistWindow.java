@@ -5,8 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class EditTodolistWindow extends JFrame{
-	private Font f = new Font("µ¸¿ò", Font.BOLD, 20);
-	private Font f2 = new Font("µ¸¿ò", Font.BOLD, 9);
+	private Font f = new Font("ë‹ì›€", Font.BOLD, 20);
+	private Font f2 = new Font("ë‹ì›€", Font.BOLD, 9);
 	
 	public EditTodolistWindow() {
 		setTitle("To do list");
@@ -22,7 +22,7 @@ public class EditTodolistWindow extends JFrame{
 		wl.setLocation(0,50);
 		wl.setBackground(new Color(255,255,255));
 		
-		JLabel title = new JLabel("To do list ÆíÁı (To-do list øºòş)");
+		JLabel title = new JLabel("To do list í¸ì§‘ (To-do list ç·¨è¼¯)");
 		c.add(title);
 		title.setLocation(370, 8);
 		title.setSize(350,40);
@@ -30,7 +30,7 @@ public class EditTodolistWindow extends JFrame{
 		
 		
 		
-		JLabel todoName = new JLabel("Ç×¸ñÀÌ¸§(ú£ÙÍÙ£öà)");
+		JLabel todoName = new JLabel("í•­ëª©ì´ë¦„(é …ç›®åç¨±)");
 		todoName.setLocation(100,70);
 		todoName.setSize(150,40);
 		todoName.setBackground(new Color(255,255,255));
@@ -41,7 +41,7 @@ public class EditTodolistWindow extends JFrame{
 		todoName2.setBackground(new Color(255,255,255));
 		c.add(todoName2);
 		
-		JLabel todoDeadline = new JLabel("¸¶°¨±âÇÑ(Ñ¢ùÚ)");
+		JLabel todoDeadline = new JLabel("ë§ˆê°ê¸°í•œ(æœŸé™)");
 		todoDeadline.setLocation(100,120);
 		todoDeadline.setSize(150,40);
 		todoDeadline.setBackground(new Color(255,255,255));
@@ -52,7 +52,7 @@ public class EditTodolistWindow extends JFrame{
 		todoDeadline2.setBackground(new Color(255,255,255));
 		c.add(todoDeadline2);
 
-		JLabel todoFinishDate = new JLabel("½ÇÁ¦¸¶°¨ÀÏ(ãùğ·ï¸ò­ìíÑ¢)");
+		JLabel todoFinishDate = new JLabel("ì‹¤ì œë§ˆê°ì¼(å¯¦éš›æˆªæ­¢æ—¥æœŸ)");
 		todoFinishDate.setLocation(100,170);
 		todoFinishDate.setSize(250,40);
 		todoFinishDate.setBackground(new Color(255,255,255));
@@ -63,7 +63,7 @@ public class EditTodolistWindow extends JFrame{
 		todoFinishDate2.setBackground(new Color(255,255,255));
 		c.add(todoFinishDate2);
 		
-		JLabel todoCompleted = new JLabel("¿Ï·á¿©ºÎ(ßÒ÷¾èÇà÷)");
+		JLabel todoCompleted = new JLabel("ì™„ë£Œì—¬ë¶€(ç‹€æ…‹å®Œæˆ)");
 		todoCompleted.setLocation(100,220);
 		todoCompleted.setSize(150,40);
 		todoCompleted.setBackground(new Color(255,255,255));
@@ -74,7 +74,7 @@ public class EditTodolistWindow extends JFrame{
 		todoCompleted2.setBackground(new Color(255,255,255));
 		c.add(todoCompleted2);
 		
-		JLabel todoImportant = new JLabel("Áß¿ä¿©ºÎ(å¥÷ó)");
+		JLabel todoImportant = new JLabel("ì¤‘ìš”ì—¬ë¶€(ä¹Ÿç½·)");
 		todoImportant.setLocation(100,270);
 		todoImportant.setSize(150,40);
 		todoImportant.setBackground(new Color(255,255,255));
@@ -85,12 +85,12 @@ public class EditTodolistWindow extends JFrame{
 		todoImportant2.setBackground(new Color(255,255,255));
 		c.add(todoImportant2);
 
-		JButton todoConfirm = new JButton("ÆíÁı(øºòş)");
+		JButton todoConfirm = new JButton("í¸ì§‘(ç·¨è¼¯)");
 		c.add(todoConfirm);
 		todoConfirm.setLocation(820,360);
 		todoConfirm.setBackground(new Color(255,255,255));
 		todoConfirm.setSize(120,40);
-		JButton todoCancel = new JButton("Ãë¼Ò(ö¢á¼)");
+		JButton todoCancel = new JButton("ì·¨ì†Œ(å–æ¶ˆ)");
 		c.add(todoCancel);
 		todoCancel.setLocation(940,360);
 		todoCancel.setBackground(new Color(255,255,255));
