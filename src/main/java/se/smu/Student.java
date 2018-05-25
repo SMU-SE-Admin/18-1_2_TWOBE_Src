@@ -1,5 +1,9 @@
 package se.smu;
 
+import java.util.Arrays;
+
+
+
 public class Student{
 	int StudentNum;
 	int arrcount=0;
@@ -41,5 +45,30 @@ public class Student{
 	
 	public Todolist[] getarr(){
 		return this.arr;
+	}
+	public void sort(String s){
+		switch(s){
+			case "name" :
+				Arrays.sort(this.arr,Todo_SortTodolist.NameComparator);
+				System.out.println(Arrays.toString(this.arr));
+				break;
+			case "deadline"  :
+				Arrays.sort(this.arr,Todo_SortTodolist.DeadlineComparator);
+				System.out.println(Arrays.toString(this.arr));
+				break;
+			case "finishDate" :
+				Todo_SortTodolist.FinishDate_sort(this.arr);
+				System.out.println(Arrays.toString(this.arr));
+				
+				break;
+			case "completed" :
+				Todo_SortTodolist.Completed_sort(this.arr);
+				System.out.println(Arrays.toString(this.arr));
+		
+		}	
+	}
+	public void bookMark(){
+		Todo_BookmarkTodolist.bookMark(this.arr);
+		System.out.println(Arrays.toString(this.arr));
 	}
 }
