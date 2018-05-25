@@ -30,8 +30,8 @@ class Login extends JFrame{
 		JLabel password = new JLabel("비밀번호");
 		JLabel studentNum2 = new JLabel("(学号)");
 		JLabel password2 = new JLabel("(密码)");
-		JTextField studentNum3 = new JTextField();
-		JPasswordField password3 = new JPasswordField();
+		final JTextField studentNum3 = new JTextField();
+		final JPasswordField password3 = new JPasswordField();
 		JButton btn1 = new JButton("비밀번호찾기(查找密码)");
 		JButton btn2 = new JButton("회원가입(报名)");
 		JButton btn3 = new JButton("로그인(注册)");
@@ -75,6 +75,7 @@ class Login extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				MainUI m; //1
 				JButton btn2 = (JButton)e.getSource();
+				
 				if(studentNum3.getText().equals("201411096") && password3.getText().equals("10301030")) {      
 					m = new MainUI(); //2
 					dispose();		      
