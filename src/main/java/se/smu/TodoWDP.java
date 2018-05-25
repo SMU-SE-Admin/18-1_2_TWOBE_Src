@@ -1,12 +1,13 @@
-package ver2_window;
+package se.smu;
+
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class TodoWDP extends JFrame{
-	private Font f = new Font("µ¸¿ò", Font.BOLD, 20);
-	private Font f2 = new Font("µ¸¿ò", Font.BOLD, 9);
+	private Font f = new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 20);
+	private Font f2 = new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 9);
 	
 	public TodoWDP(String str1, String str2) {
 		setTitle("To do list");
@@ -29,7 +30,7 @@ public class TodoWDP extends JFrame{
 		title.setFont(f);
 		
 				
-		JLabel todoName = new JLabel("Ç×¸ñÀÌ¸§(ú£ÙÍÙ£öà)");
+		JLabel todoName = new JLabel("ï¿½×¸ï¿½ï¿½Ì¸ï¿½(ï¿½ï¿½ï¿½ï¿½Ù£ï¿½ï¿½)");
 		todoName.setLocation(100,70);
 		todoName.setSize(150,40);
 		todoName.setBackground(new Color(255,255,255));
@@ -40,7 +41,7 @@ public class TodoWDP extends JFrame{
 		todoName2.setBackground(new Color(255,255,255));
 		c.add(todoName2);
 		
-		JLabel todoDeadline = new JLabel("¸¶°¨±âÇÑ(Ñ¢ùÚ)");
+		JLabel todoDeadline = new JLabel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(Ñ¢ï¿½ï¿½)");
 		todoDeadline.setLocation(100,120);
 		todoDeadline.setSize(150,40);
 		todoDeadline.setBackground(new Color(255,255,255));
@@ -51,7 +52,7 @@ public class TodoWDP extends JFrame{
 		todoDeadline2.setBackground(new Color(255,255,255));
 		c.add(todoDeadline2);
 
-		JLabel todoFinishDate = new JLabel("½ÇÁ¦¸¶°¨ÀÏ(ãùð·ï¸ò­ìíÑ¢)");
+		JLabel todoFinishDate = new JLabel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¢)");
 		todoFinishDate.setLocation(100,170);
 		todoFinishDate.setSize(250,40);
 		todoFinishDate.setBackground(new Color(255,255,255));
@@ -62,7 +63,7 @@ public class TodoWDP extends JFrame{
 		todoFinishDate2.setBackground(new Color(255,255,255));
 		c.add(todoFinishDate2);
 		
-		JLabel todoCompleted = new JLabel("¿Ï·á¿©ºÎ(ßÒ÷¾èÇà÷)");
+		JLabel todoCompleted = new JLabel("ï¿½Ï·á¿©ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)");
 		todoCompleted.setLocation(100,220);
 		todoCompleted.setSize(150,40);
 		todoCompleted.setBackground(new Color(255,255,255));
@@ -73,7 +74,7 @@ public class TodoWDP extends JFrame{
 		todoCompleted2.setBackground(new Color(255,255,255));
 		c.add(todoCompleted2);
 		
-		JLabel todoImportant = new JLabel("Áß¿ä¿©ºÎ(å¥÷ó)");
+		JLabel todoImportant = new JLabel("ï¿½ß¿ä¿©ï¿½ï¿½(ï¿½ï¿½ï¿½)");
 		todoImportant.setLocation(100,270);
 		todoImportant.setSize(150,40);
 		todoImportant.setBackground(new Color(255,255,255));
@@ -89,7 +90,7 @@ public class TodoWDP extends JFrame{
 		todoConfirm.setLocation(820,360);
 		todoConfirm.setBackground(new Color(255,255,255));
 		todoConfirm.setSize(120,40);
-		JButton todoCancel = new JButton("Ãë¼Ò(ö¢á¼)");
+		JButton todoCancel = new JButton("ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½)");
 		c.add(todoCancel);
 		todoCancel.setLocation(940,360);
 		todoCancel.setBackground(new Color(255,255,255));
