@@ -4,12 +4,12 @@ import java.io.*;
 
 public class AddSubject {
   public static void main(String[] args) {
-	  //»ç¿ëÀÚÀÇ ¼ö°­°ú¸ñ ¸ñ·ÏÀ» ºÒ·¯¿Í È­¸é¿¡ ¶ç¿ì°í ¼ö°­ÇÒ °ú¸ñÀ» Ãß°¡½ÃÅ°¸é »ç¿ëÀÚÀÇ ¼ö°­°ú¸ñ ¸ñ·Ï textÆÄÀÏ¿¡ Ãß°¡µÇ´Â ÄÚµå
-	  //»ç¿ëÀÚÀÇ ¼ö°­°ú¸ñÀ» ºÒ·¯¿À´Â ÄÚµå
+	  //ì‚¬ìš©ìì˜ ìˆ˜ê°•ê³¼ëª© ëª©ë¡ì„ ë¶ˆëŸ¬ì™€ í™”ë©´ì— ë„ìš°ê³  ìˆ˜ê°•í•  ê³¼ëª©ì„ ì¶”ê°€ì‹œí‚¤ë©´ ì‚¬ìš©ìì˜ ìˆ˜ê°•ê³¼ëª© ëª©ë¡ textíŒŒì¼ì— ì¶”ê°€ë˜ëŠ” ì½”ë“œ
+	  //ì‚¬ìš©ìì˜ ìˆ˜ê°•ê³¼ëª©ì„ ë¶ˆëŸ¬ì˜¤ëŠ” ì½”ë“œ
 	  BufferedReader br = null;
 	  try {
 		  String s;
-		  File file = new File("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubject.txt"); //ÆÄÀÏ °æ·Î
+		  File file = new File("C:\\Users\\Wan\\eclipse-workspace\\SE_project\\src\\main\\java\\se\\smu\\usersubject.txt"); //íŒŒì¼ ê²½ë¡œ
 		  br = new BufferedReader(new FileReader(file));
 		  
 		  while((s = br.readLine()) != null) {
@@ -28,7 +28,7 @@ public class AddSubject {
 			  e.printStackTrace();
 		  }
 	  }
-	  //ÀÔ·Â¹ŞÀº ¼ö°­°ú¸ñÀ» Ãß°¡ÇÏ°í ÀúÀåÇÏ´Â ÄÚµå
+	  //ì…ë ¥ë°›ì€ ìˆ˜ê°•ê³¼ëª©ì„ ì¶”ê°€í•˜ê³  ì €ì¥í•˜ëŠ” ì½”ë“œ
 	  BufferedReader bw = new BufferedReader(new InputStreamReader(System.in));
 	  PrintWriter pw = null;
 
@@ -39,7 +39,7 @@ public class AddSubject {
 			  String input = bw.readLine();
 			  if(input == null)
 				  break;
-			  if (input.equals("¿Ï·á")) //¿Ï·á ¹öÆ°À» Å¬¸¯ÇÏ¸é ÀúÀåµÇµµ·Ï
+			  if (input.equals("ì™„ë£Œ")) //ì™„ë£Œ ë²„íŠ¼ì„ í´ë¦­í•˜ë©´ ì €ì¥ë˜ë„ë¡
 				  break;
 			  pw.println(input);
 		  }
