@@ -68,6 +68,20 @@ class Login extends JFrame{
 		btn2.setSize(130,20);
 		btn3.setLocation(380,300);
 		btn3.setSize(120,20);
+
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FindPassword f; //1
+				
+				JButton btn1 = (JButton)e.getSource();
+				
+				if(true) {      
+					f = new FindPassword(); //2
+							      
+				}
+
+			}
+		});
 		
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -77,7 +91,7 @@ class Login extends JFrame{
 				
 				if(true) {      
 					s = new SignUp(); //2
-					dispose();		      
+	      
 				}
 
 			}
