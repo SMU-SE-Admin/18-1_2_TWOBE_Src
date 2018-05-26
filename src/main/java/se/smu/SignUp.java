@@ -94,6 +94,12 @@ public class SignUp extends JFrame{
 		todoCancel.setLocation(940,360);
 		todoCancel.setBackground(new Color(255,255,255));
 		todoCancel.setSize(120,40);
+		
+		todoCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {				
+					dispose();						      
+			}
+		});
 
 		setSize(1080, 470);
 		setVisible(true);
