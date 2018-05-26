@@ -10,7 +10,6 @@ public class FindPassword extends JFrame{
 	
 	public FindPassword() {
 		setTitle("To do list");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		Container c = getContentPane();
 		c.setBackground(new Color(184,255,255));
