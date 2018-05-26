@@ -69,6 +69,19 @@ class Login extends JFrame{
 		btn3.setLocation(380,300);
 		btn3.setSize(120,20);
 		
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SignUp s; //1
+				
+				JButton btn2 = (JButton)e.getSource();
+				
+				if(true) {      
+					s = new SignUp(); //2
+					dispose();		      
+				}
+
+			}
+		});
 
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
