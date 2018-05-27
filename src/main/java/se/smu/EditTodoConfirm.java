@@ -16,6 +16,7 @@ public class EditTodoConfirm extends JFrame{
 		c.setLayout(null);
 		
 	
+		
 		JLabel title = new JLabel("To-do 항목을 편집하시겠습니까?");
 		c.add(title);
 		title.setLocation(100, 40);

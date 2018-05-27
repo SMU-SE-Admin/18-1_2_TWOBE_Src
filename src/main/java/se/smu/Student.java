@@ -48,6 +48,7 @@ public class Student{
 		//return;
 	}
 	
+	
 	//수정 끝나는 부분
 	
 	public void add_tdl(String s){

@@ -12,6 +12,7 @@ public class DeleteSubject   {
 			arr[i]=arr[i+1];
 		}
 		
+		
 		arr[count-1]=null;
 		
 		try{

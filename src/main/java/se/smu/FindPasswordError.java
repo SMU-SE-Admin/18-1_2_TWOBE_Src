@@ -22,6 +22,7 @@ public class FindPasswordError extends JFrame{
 		c.add(em);
 		c.add(ob);
 		
+		
 		em.setLocation(100, 15);
 		em.setSize(250, 50);
 		ob.setLocation(140, 85);

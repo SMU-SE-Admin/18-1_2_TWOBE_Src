@@ -96,6 +96,7 @@ public class AddTodolistWindow extends JFrame{
 		todoCancel.setBackground(new Color(255,255,255));
 		todoCancel.setSize(120,40);
 
+		
 		setSize(1080, 470);
 		setVisible(true);
 	}

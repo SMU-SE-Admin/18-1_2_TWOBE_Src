@@ -29,7 +29,8 @@ public class Todo_DeleteTodolist implements Serializable{
 			}
 			
 			writer.close();	
-						
+				
+			
 		}catch (Exception e){
 			e.printStackTrace();
 		}

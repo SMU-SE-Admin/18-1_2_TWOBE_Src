@@ -121,6 +121,7 @@ public class AddSubject3 extends JFrame{
 		
 		
 		
+		
 		setSize(1080, 420);
 		setVisible(true);
 	}

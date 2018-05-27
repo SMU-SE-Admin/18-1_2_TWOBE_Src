@@ -23,6 +23,7 @@ public class Todo_SortTodolist  {
 	            .collect(Collectors.toList());
 	      finishList.stream()
 	         .forEach(s->System.out.println(s.gettdlFinishDate()));
+	      
 	         
 	   }
 	public static void Completed_sort(Todolist[] arr){

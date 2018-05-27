@@ -14,6 +14,7 @@ public class AddTodoConfirm extends JFrame{
 		Container c = getContentPane();
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
+
 		
 	
 		JLabel title = new JLabel("To-do 항목을 등록하시겠습니까?");

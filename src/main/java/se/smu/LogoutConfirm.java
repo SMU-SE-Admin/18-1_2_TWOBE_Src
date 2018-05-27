@@ -27,6 +27,7 @@ public class LogoutConfirm extends JFrame{
 		title2.setSize(350,40);
 
 		
+		
 		JButton btn1 = new JButton("네(是)");
 		JButton btn2 = new JButton("아니오(沒有)");
 		c.add(btn1);

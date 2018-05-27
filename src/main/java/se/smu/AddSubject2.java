@@ -307,6 +307,7 @@ public class AddSubject2 extends JFrame{
 		subjectSem7.setBackground(new Color(255,255,255));
 		c.add(subjectSem7);
 		
+		
 		JButton subjectplus = new JButton("+");
 		c.add(subjectplus);
 		subjectplus.setLocation(10,830);

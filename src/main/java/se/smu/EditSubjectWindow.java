@@ -12,6 +12,7 @@ public class EditSubjectWindow extends JFrame{
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		
 		Container c = getContentPane();
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);

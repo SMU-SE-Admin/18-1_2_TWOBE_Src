@@ -64,12 +64,8 @@ public class FindPassword extends JFrame{
 		todoCancel.setSize(120,40);
 		setSize(1080, 320);
 		setVisible(true);
-		todoConfirm.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e) {				
-				String todoName=todoName2.getText();
-				
-		}
-		});
+		
+		
 		todoCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
 					dispose();						      

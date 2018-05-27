@@ -21,6 +21,7 @@ public class SubjectEditError extends JFrame{
 		c.add(em);
 		c.add(ob);
 		
+		
 		em.setLocation(70, 15);
 		em.setSize(250, 50);
 		ob.setLocation(140, 85);

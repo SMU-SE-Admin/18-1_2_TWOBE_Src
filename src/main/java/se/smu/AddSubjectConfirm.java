@@ -16,6 +16,7 @@ public class AddSubjectConfirm extends JFrame{
 		c.setLayout(null);
 		
 	
+		
 		JLabel title = new JLabel("수강과목을 등록하시겠습니까?");
 		c.add(title);
 		title.setLocation(110, 40);

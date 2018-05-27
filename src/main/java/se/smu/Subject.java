@@ -17,6 +17,7 @@ public class Subject {
 	      this.semester=semester;
 	 }
 	   
+	 
 	 public String getSubjectName(){
 		 return this.subjectName;
 	 }

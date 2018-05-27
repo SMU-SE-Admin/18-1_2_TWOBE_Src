@@ -39,6 +39,7 @@ public class LoginError extends JFrame{
 		setSize(360, 180);
 		setVisible(true);
 		
+		
 		ob.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 

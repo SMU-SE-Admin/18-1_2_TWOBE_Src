@@ -15,6 +15,7 @@ public class DeleteTodoConfirm extends JFrame{
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
 		
+		
 	
 		JLabel title = new JLabel("To-do 항목을 삭제하시겠습니까?");
 		c.add(title);

@@ -13,6 +13,7 @@ public class Todo_BookmarkTodolist {
 		ImportantList.stream()
 			.forEach(s->System.out.println(s.gettdlImportant()));
 		
+		
 	}
 
 }

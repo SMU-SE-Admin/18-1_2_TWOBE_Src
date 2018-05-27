@@ -8,7 +8,7 @@ public class MainUI extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	Container c;
-	public MainUI() {
+	public MainUI(int id) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -24,7 +24,7 @@ public class MainUI extends JFrame{
 		wl.setBackground(new Color(255,255,255));
 		
 		
-		JLabel title = new JLabel("To - Do List");
+		JLabel title = new JLabel("To - Do List"+id);
 		c.add(title);
 		title.setLocation(430, 12);
 		title.setSize(350,40);

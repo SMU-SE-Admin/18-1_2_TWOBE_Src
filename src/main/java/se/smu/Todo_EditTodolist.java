@@ -18,6 +18,7 @@ public class Todo_EditTodolist implements Serializable {
 			};
 			index++;
 		}
+		
 		try{
 			// 수정된 배열을 파일에 통째로 덮어씌움
 			ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(tdlUrl));

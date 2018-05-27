@@ -22,6 +22,7 @@ public class Todolist implements Serializable{
 	 public String getSubjectName(){
 		 return this.subjectName;
 	 }
+	 
 	 public String gettdlName(){
 	    return this.tdlName;
 	 }

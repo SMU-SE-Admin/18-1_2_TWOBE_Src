@@ -15,6 +15,7 @@ public class AddSubject1 extends JFrame{
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
 		
+		
 		JPanel wl = new JPanel();
 		c.add(wl);
 		wl.setSize(520, 3);

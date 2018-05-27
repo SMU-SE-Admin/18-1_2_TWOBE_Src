@@ -21,6 +21,7 @@ public class TodoAddError extends JFrame{
 		c.add(em);
 		c.add(ob);
 		
+		
 		em.setLocation(20, 15);
 		em.setSize(350, 50);
 		ob.setLocation(140, 85);
