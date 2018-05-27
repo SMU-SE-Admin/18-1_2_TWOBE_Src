@@ -325,6 +325,22 @@ public class AddSubject2 extends JFrame{
 		subjectplus.setLocation(10,830);
 		subjectplus.setBackground(new Color(255,255,255));
 		subjectplus.setSize(95,40);
+		
+		// 로그아웃
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				Login l = new Login();
+				dispose();
+			}
+		});
+		
+		// 메인화면으로
+		btn11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				MainUI l = new MainUI(st);
+				dispose();
+			}
+		});
 
 		setSize(1080, 960);
 		setVisible(true);
