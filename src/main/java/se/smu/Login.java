@@ -14,22 +14,6 @@ class Login extends JFrame{
 	String password = "10301030";
 	int id;
 
-
-	//수정 시작부분
-
-	//try {
-	//File src = new File("C:\\Users\\aaaaaa\\eclipse-workspace\\TWOBE" + siUrl +"_uer.txt");
-	//FileInputStream fi = new FileInputStream(src);
-	//ObjectInputStream writer = new ObjectInputStream(fi);
-	//User user = (User)(writer.readObject());
-	//}
-	//catch(FileNotFoundException e) {
-	//	e.printStackTrace();
-	//}
-
-
-	//수정 끝부분
-	
 	public Login() {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
