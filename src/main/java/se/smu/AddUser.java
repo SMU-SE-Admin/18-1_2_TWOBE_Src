@@ -10,23 +10,23 @@ public class AddUser {
 	 
     private String filePath;
     private User user;
-    public static void main(String[] args){
+//    public static void main(String[] args){
          
-    	AddUser main = new AddUser();
-        try {
-            main.init();
-            main.doSerializable();
-            User user = (User) main.undoSerializable();
-             
+//    	AddUser main = new AddUser();
+//       try {
+//            main.init();
+//            main.doSerializable();
+//            User user = (User) main.undoSerializable();
+//             
            // System.out.println(user.getStudentName());
-
-             
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//
+//             
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
      
     public void init() {
  
