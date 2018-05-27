@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class User {
+public class User implements Serializable{
     private static final long serialVersionUID = 2L;
      private String studentNum;
 	 private String studentName;

@@ -1,8 +1,14 @@
 package se.smu;
-import java.util.Arrays; //수정된 부분
-import java.io.Serializable; //수정된 부분
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import javax.swing.*;
 import javax.swing.event.*;
+
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -100,12 +106,26 @@ public class SignUp extends JFrame{
 		//수정한 부분 시작
 		todoConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String siUrl = todoName2.getText()+"_user.txt";
+				String num = todoName2.getText();
 				String a =todoDeadline2.getText();
 				String b=todoFinishDate2.getText();
 				String c=todoCompleted2.getText();
 				String d=todoImportant2.getText();
-				AddUser.add(siUrl, a, b, c, d);
+				AddUser addUser = new AddUser();
+				 try {
+					 addUser.init(num, a, b, c, d);
+					 addUser.doSerializable();
+					 User user = (User) addUser.undoSerializable();
+
+		             
+
+		
+		             
+		        } catch (ClassNotFoundException o) {
+		            o.printStackTrace();
+		        } catch (IOException n) {
+		            n.printStackTrace();
+		        }
 				dispose();
 				
 			}

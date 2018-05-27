@@ -28,16 +28,21 @@ public class AddUser {
 //        }
 //    }
      
-    public void init() {
+    public void init(String num, String a, String b, String c, String d) {
  
  
          
         user = new User();
+        user.setStudentNum(num);
+        user.setStudentName(a);
+        user.setMajor(b);
+        user.setPassword(c);
+        user.setQues(d);
        // user.setName("kim dong");
        // user.setAge(50);
        // user.setPhoneNumber("010-9858-9985");
         
-        filePath = "C:\\Users\\aaaaaa\\eclipse-workspace\\TWOBE\\"+user.getStudentNum()+".ser";
+        filePath = "C:\\Users\\aaaaaa\\eclipse-workspace\\"+num+".ser";
     }
      
     // 마샬링(marshalling) 수행, 직렬화

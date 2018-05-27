@@ -1,6 +1,8 @@
 package se.smu;
 import javax.swing.*;
 import javax.swing.event.*;
+
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -114,29 +116,32 @@ class Login extends JFrame{
 		});
 
 		btn3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e)  {
 				MainUI m; //1
 				LoginError l;
 				JButton btn2 = (JButton)e.getSource();
-				//수정 시작 부분
-				String siUrl = btn3.getText();
-				User user= null;
-				try {	
-					ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(siUrl,true));
-					user = (User)(((ObjectInput) writer).readObject());
-					writer.close();	
-					
-				}catch (Exception b) {
-					b.printStackTrace();
-				}
+				AddUser main = new AddUser();
+				String num = studentNum3.getText();
+				User user=null;
+				try {
+				FileInputStream fileStream = new FileInputStream("C:\\Users\\aaaaaa\\eclipse-workspace\\"+num+".ser"); // 직렬화해서 썼던 파일을 다시 읽오는 역할
+				ObjectInputStream is = new ObjectInputStream(fileStream); // 읽어온 직렬화된 내용을 역직렬화 하는 역할
 
-				//studentNum3.getText().equals("201411096") && 
-				if(password3.getText().equals(user.getPassword())) {      
-					m = new MainUI(); //2
-					dispose();		      
-				}
+				user = (User)is.readObject(); 
+				} catch (ClassNotFoundException o) {
+		            o.printStackTrace();
+		        } catch (IOException n) {
+		            n.printStackTrace();
+		        }
 				
-				//수정 끝 부분
+				String check = user.getPassword();
+				
+				String password = password3.getText();
+
+				if(password.equals(check)) {
+					m = new MainUI(); //2
+					dispose();	
+				}
 				else {
 					l = new LoginError();
 				}
