@@ -1,4 +1,4 @@
-package test_signup;
+package se.smu;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
