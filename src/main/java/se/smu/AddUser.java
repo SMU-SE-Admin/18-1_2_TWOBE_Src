@@ -41,7 +41,6 @@ public class AddUser {
        // user.setName("kim dong");
        // user.setAge(50);
        // user.setPhoneNumber("010-9858-9985");
-     
         
         filePath = num+".ser";
     }

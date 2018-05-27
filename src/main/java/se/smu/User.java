@@ -15,9 +15,8 @@ public class User implements Serializable{
 	 private String ques;
      
 	 
-	 
 	public String getStudentNum() {
-	    return studentName;
+	    return studentNum;
 	}
 	public void setStudentNum(String studentNum) {
 	    this.studentNum = studentNum;
@@ -43,7 +42,7 @@ public class User implements Serializable{
     public String getQues() {
         return ques;
     }
-    public void setQues(String password) {
+    public void setQues(String ques) {
         this.ques = ques;
     }
 }

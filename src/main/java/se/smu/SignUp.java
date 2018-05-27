@@ -24,7 +24,6 @@ public class SignUp extends JFrame{
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
 		
-		
 		JPanel wl = new JPanel();
 		c.add(wl);
 		wl.setSize(1080, 3);
@@ -118,7 +117,7 @@ public class SignUp extends JFrame{
 					 addUser.doSerializable();
 					 User user = (User) addUser.undoSerializable();
 
-		             
+
 
 		
 		             

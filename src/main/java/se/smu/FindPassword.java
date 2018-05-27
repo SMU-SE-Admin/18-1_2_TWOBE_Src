@@ -3,6 +3,9 @@ import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 public class FindPassword extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
@@ -20,6 +23,12 @@ public class FindPassword extends JFrame{
 		wl.setSize(1080, 3);
 		wl.setLocation(0,50);
 		wl.setBackground(new Color(255,255,255));
+		
+		JPanel wl2 = new JPanel();
+		c.add(wl2);
+		wl2.setSize(1080, 3);
+		wl2.setLocation(0,280);
+		wl2.setBackground(new Color(255,255,255));
 		
 		JLabel title = new JLabel("비밀번호 찾기 (查找密码)");
 		c.add(title);
@@ -62,9 +71,59 @@ public class FindPassword extends JFrame{
 		todoCancel.setLocation(940,210);
 		todoCancel.setBackground(new Color(255,255,255));
 		todoCancel.setSize(120,40);
-		setSize(1080, 320);
+		setSize(1080, 440);
 		setVisible(true);
 		
+		JLabel todoImportant1 = new JLabel("찾는 비밀번호(寻找密码)");
+		todoImportant1.setLocation(50,320);
+		todoImportant1.setSize(250,40);
+		todoImportant1.setBackground(new Color(255,255,255));
+		c.add(todoImportant1);
+		JTextField todoImportant21 = new JTextField();
+		todoImportant21.setLocation(300,320);
+		todoImportant21.setSize(650,40);
+		todoImportant21.setBackground(new Color(255,255,255));
+		c.add(todoImportant21);
+		
+		
+		todoConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {				
+				MainUI m; //수정 시작
+				FindPasswordError l;
+				JButton btn2 = (JButton)e.getSource();
+				AddUser main = new AddUser();
+				String num = todoName2.getText();
+				User user=null;
+				try {
+				FileInputStream fileStream = new FileInputStream(num+".ser"); // 직렬화해서 썼던 파일을 다시 읽오는 역할
+				ObjectInputStream is = new ObjectInputStream(fileStream); // 읽어온 직렬화된 내용을 역직렬화 하는 역할
+
+				user = (User)is.readObject(); 
+				} catch (ClassNotFoundException o) {
+		            o.printStackTrace();
+		        } catch (IOException n) {
+		            n.printStackTrace();
+		        }
+				
+				String check = user.getQues();
+				
+				String p = todoImportant2.getText();
+
+				if(p.equals(check)) {
+					todoImportant21.setText(user.getPassword());
+	
+				}
+				else {
+					l = new FindPasswordError();
+					System.out.println(p);
+					System.out.println(user.getMajor());
+					System.out.println(user.getPassword());
+					System.out.println(user.getQues());
+					System.out.println(user.getStudentName());
+					System.out.println(user.getStudentNum());
+				}					      
+			} //수정 끝
+		});
 		
 		todoCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
