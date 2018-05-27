@@ -1,6 +1,8 @@
 package se.smu;
 import javax.swing.*;
 import javax.swing.event.*;
+
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -8,7 +10,7 @@ public class AddSubjectWindow extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
-	public AddSubjectWindow() {
+	public AddSubjectWindow(Student st) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -111,10 +113,27 @@ public class AddSubjectWindow extends JFrame{
 
 		setSize(1080, 520);
 		setVisible(true);
+		subjectConfirm.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+			
+				String subUrl=st.subUrl;
+				String subjectName=subjectName2.getText();
+				String professer=subjectProf2.getText();
+				String subjectDay=subjectDay2.getText();
+				int subjectTime=Integer.parseInt(subjectTime2.getText());
+				int runYear=Integer.parseInt(subjectYear2.getText());
+				int semester=Integer.parseInt(subjectSemester2.getText());
+				st.add_sub(subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
+				
+				AddSubject2 as2= new AddSubject2(st);
+				dispose();
+				
+			}
+		});
 	}
 	
 	public static void main(String[] args) {
-		AddSubjectWindow addSubjectWindow = new AddSubjectWindow();
+		//AddSubjectWindow addSubjectWindow = new AddSubjectWindow();
 	}
 
 }

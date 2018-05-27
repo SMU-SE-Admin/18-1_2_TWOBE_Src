@@ -2,17 +2,17 @@ package se.smu;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-
-public class AddSubject {
-  public static Subject add(String subUrl) {
-     Subject sub = new Subject("a","c","v",3,6,7);
+public class AddSubject implements Serializable{
+	
+  public static Subject add(String subUrl,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester) {
+     Subject sub = new Subject(subjectName,professer,subjectDay,subjectTime,runYear, semester);
      
      try {   
          ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(subUrl,true));
          writer.writeObject(sub);
          writer.close();   
-         
          
       }catch (Exception e) {
          e.printStackTrace();

@@ -1,6 +1,8 @@
 package se.smu;
 
-public class Subject {
+import java.io.Serializable;
+
+public class Subject  implements Serializable{
 	 private String subjectName;
 	 private String professer;
 	 private String subjectDay;
@@ -17,7 +19,6 @@ public class Subject {
 	      this.semester=semester;
 	 }
 	   
-	 
 	 public String getSubjectName(){
 		 return this.subjectName;
 	 }

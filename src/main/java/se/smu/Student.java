@@ -1,6 +1,8 @@
 package se.smu;
 
 import java.util.Arrays;
+
+
 import java.io.Serializable; //추가한 부분
 
 
@@ -19,7 +21,13 @@ public class Student{
 		this.tdlUrl = num+"_todo.txt";
 		this.subUrl = num+"_sub.txt";
 	}
-	
+	//add_sub 추가
+	public void add_sub(String s,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester){
+	      Subject sub = AddSubject.add(this.subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
+	      this.s_arr[this.s_arrcount] = sub;
+	      this.s_arrcount++;
+	      return;
+	   }
 	public void edit_sub(String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester,String oldsub){
 		this.s_arr = EditSubject.edit(subjectName,professer,subjectDay,subjectTime,runYear,semester,this.s_arr,this.s_arrcount,this.subUrl,oldsub);
 		return;
@@ -30,14 +38,13 @@ public class Student{
 		return;
 		
 	}
-
-	public void add_tdl(String s){
-		Todolist todo = Todo_AddTodolist.add(this.tdlUrl,s);
+    //gui에서 받아서 넘겨줌
+	public void add_tdl(String s,String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant){
+		Todolist todo = Todo_AddTodolist.add(this.tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
 		this.t_arr[this.t_arrcount] = todo;
 		this.t_arrcount++;
 		return;
 	}
-	
 	public void del_tdl(int num){
 		this.t_arr = Todo_DeleteTodolist.Delete(this.tdlUrl,this.t_arr,this.t_arrcount,num);
 		this.t_arrcount--;
