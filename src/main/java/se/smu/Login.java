@@ -124,7 +124,7 @@ class Login extends JFrame{
 				String num = studentNum3.getText();
 				User user=null;
 				try {
-				FileInputStream fileStream = new FileInputStream("C:\\Users\\aaaaaa\\eclipse-workspace\\"+num+".ser"); // 직렬화해서 썼던 파일을 다시 읽오는 역할
+				FileInputStream fileStream = new FileInputStream(num+".ser"); // 직렬화해서 썼던 파일을 다시 읽오는 역할
 				ObjectInputStream is = new ObjectInputStream(fileStream); // 읽어온 직렬화된 내용을 역직렬화 하는 역할
 
 				user = (User)is.readObject(); 

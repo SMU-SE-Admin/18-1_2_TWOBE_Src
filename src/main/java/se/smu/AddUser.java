@@ -42,7 +42,7 @@ public class AddUser {
        // user.setAge(50);
        // user.setPhoneNumber("010-9858-9985");
         
-        filePath = "C:\\Users\\aaaaaa\\eclipse-workspace\\"+num+".ser";
+        filePath = num+".ser";
     }
      
     // 마샬링(marshalling) 수행, 직렬화
