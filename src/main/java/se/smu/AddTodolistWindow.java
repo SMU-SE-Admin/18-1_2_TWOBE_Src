@@ -1,6 +1,8 @@
 package se.smu;
 import javax.swing.*;
 import javax.swing.event.*;
+
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -8,7 +10,7 @@ public class AddTodolistWindow extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
-	public AddTodolistWindow() {
+	public AddTodolistWindow(Student st) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -99,10 +101,39 @@ public class AddTodolistWindow extends JFrame{
 		
 		setSize(1080, 470);
 		setVisible(true);
+		todoConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String tdlUrl=st.tdlUrl;
+				String subjectName="00";
+				String tdlName=todoName2.getText();
+				String tdlDeadline=todoDeadline2.getText();
+				String tdlFinishDate=todoFinishDate2.getText();
+				Boolean tdlCompleted=Boolean.valueOf(todoCompleted2.getText()).booleanValue();
+				Boolean tdlImportant=Boolean.valueOf(todoImportant2.getText()).booleanValue();
+				
+			
+			    st.add_tdl(tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
+			    MainUI m=new MainUI(st);
+			  
+			    dispose();
+			    
+		
+			}
+		});
+		
+		todoCancel.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				MainUI m;
+				m=new MainUI(st);
+				dispose();
+				
+			}
+		});
 	}
 	
 	public static void main(String[] args) {
-		AddTodolistWindow addTodolistWindow = new AddTodolistWindow();
+		//AddTodolistWindow addTodolistWindow = new AddTodolistWindow();
 	}
 
 }

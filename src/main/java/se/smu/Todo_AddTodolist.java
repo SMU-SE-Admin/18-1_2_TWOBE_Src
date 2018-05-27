@@ -6,10 +6,10 @@ import java.io.Serializable;
 
 public class Todo_AddTodolist implements Serializable{
 	
-	public static Todolist add(String tdlUrl,String s){
+	public static Todolist add(String tdlUrl,String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant){
 		
 		//  확인을 위해 tdl이름만 넘겨받도록 구현,추후 GUI에서 넘겨받기
-		Todolist n = new Todolist("a",s,"c",null,true,true);
+		Todolist n = new Todolist(subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
 		
 		// 파일에 저장
 		try {	
@@ -20,7 +20,6 @@ public class Todo_AddTodolist implements Serializable{
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		
 		return n;
 

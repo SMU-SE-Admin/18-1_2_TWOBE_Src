@@ -234,7 +234,7 @@ public class MainUI extends JFrame{
 		// 수강과목
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
-				AddSubject2 l = new AddSubject2();
+				AddSubject2 l = new AddSubject2(st);
 				dispose();
 			}
 		});
