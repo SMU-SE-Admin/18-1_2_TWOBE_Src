@@ -8,7 +8,7 @@ public class EditTodolistWindow extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
-	public EditTodolistWindow() {
+	public EditTodolistWindow(Student st,int i) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -99,10 +99,32 @@ public class EditTodolistWindow extends JFrame{
 
 		setSize(1080, 470);
 		setVisible(true);
+		
+		// 추가
+		todoConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				String tdlName = todoName2.getText();
+				String tdlDeadline = todoDeadline2.getText();
+				String tdlFinishDate = todoFinishDate2.getText();
+				String tdlCompleted = todoCompleted2.getText();
+				String tdlImportant = todoImportant2.getText();
+				
+				boolean Com = (tdlCompleted.equals("O")) ? true : false;
+				boolean Imp = (tdlImportant.equals("O")) ? true : false;
+				
+				st.edit_tdl(tdlName, tdlDeadline, tdlFinishDate, Com, Imp, i);
+				
+			}
+		});
+		
+		//취소 
+		todoCancel.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				MainUI mainUi = new MainUI(st);
+				dispose();
+			}
+		});
 	}
-	
-	public static void main(String[] args) {
-		EditTodolistWindow editTodolistWindow = new EditTodolistWindow();
-	}
+
 
 }

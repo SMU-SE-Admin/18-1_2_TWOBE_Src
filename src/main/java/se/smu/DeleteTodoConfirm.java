@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class DeleteTodoConfirm extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	
-	public DeleteTodoConfirm() {
+	public DeleteTodoConfirm(Student st,int i) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -41,10 +41,20 @@ public class DeleteTodoConfirm extends JFrame{
 		
 		setSize(520, 290);
 		setVisible(true);
+		
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				st.del_tdl(i);
+			}
+		});
+		
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				MainUI l = new MainUI(st);
+			}
+		});
 	}
 	
-	public static void main(String[] args) {
-		DeleteTodoConfirm deleteTodoConfirm = new DeleteTodoConfirm();
-	}
+	
 
 }

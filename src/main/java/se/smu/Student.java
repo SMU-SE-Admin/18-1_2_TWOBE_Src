@@ -12,25 +12,17 @@ public class Student{
 	Subject s_arr[] = new Subject[100];
 	String tdlUrl;
 	String subUrl;
-	//수정 시작 부분
-	int si_arrcount=0;
-	User si_arr[] = new User[100];
-	String siUrl;
 	
-
-	//수정 끝나는 부분
 	
 	public Student(int num){
 		this.StudentNum = num;
 		this.tdlUrl = num+"_todo.txt";
 		this.subUrl = num+"_sub.txt";
-		//수정 시작 부분
-		this.siUrl = num+"_user.txt";
-		//수정 끝나는 부분
 	}
 	
 	public void edit_sub(String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester,String oldsub){
-		EditSubject.edit(subjectName,professer,subjectDay,subjectTime,runYear,semester,this.s_arr,this.s_arrcount,this.subUrl,oldsub);
+		this.s_arr = EditSubject.edit(subjectName,professer,subjectDay,subjectTime,runYear,semester,this.s_arr,this.s_arrcount,this.subUrl,oldsub);
+		return;
 	}
 	public void del_sub(String subUrl,Subject[] arr ,int count,String del_subname){
 		this.s_arr=DeleteSubject.delete(this.subUrl, this.s_arr, this.s_arrcount, del_subname);
@@ -38,19 +30,7 @@ public class Student{
 		return;
 		
 	}
-	
-	//수정 시작 부분
-	
-	public void add_user(String s) {
-		//User user = AddUser.add(this.siUrl, s);
-		//this.si_arr[this.si_arrcount] = user;
-		//this.si_arrcount++;
-		//return;
-	}
-	
-	
-	//수정 끝나는 부분
-	
+
 	public void add_tdl(String s){
 		Todolist todo = Todo_AddTodolist.add(this.tdlUrl,s);
 		this.t_arr[this.t_arrcount] = todo;
@@ -58,14 +38,14 @@ public class Student{
 		return;
 	}
 	
-	public void del_tdl(String a){
-		this.t_arr = Todo_DeleteTodolist.Delete(this.tdlUrl,this.t_arr,this.t_arrcount,a);
+	public void del_tdl(int num){
+		this.t_arr = Todo_DeleteTodolist.Delete(this.tdlUrl,this.t_arr,this.t_arrcount,num);
 		this.t_arrcount--;
 		return;
 	}
 	
-	public void edit_tdl(String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant,String oldtd){
-		this.t_arr = Todo_EditTodolist.Edit(subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant,oldtd,this.tdlUrl,this.t_arr,this.t_arrcount);
+	public void edit_tdl(String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant,int i){
+		this.t_arr = Todo_EditTodolist.Edit(tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant,i,this.tdlUrl,this.t_arr,this.t_arrcount);
 		return;
 	}
 	
@@ -80,6 +60,7 @@ public class Student{
 	public Todolist[] getarr(){
 		return this.t_arr;
 	}
+	
 	
 	public void sort(String s){
 		switch(s){

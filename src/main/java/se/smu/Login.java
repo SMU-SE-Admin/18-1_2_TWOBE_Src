@@ -14,22 +14,6 @@ class Login extends JFrame{
 	String password = "10301030";
 	int id;
 
-
-	//수정 시작부분
-
-	//try {
-	//File src = new File("C:\\Users\\aaaaaa\\eclipse-workspace\\TWOBE" + siUrl +"_uer.txt");
-	//FileInputStream fi = new FileInputStream(src);
-	//ObjectInputStream writer = new ObjectInputStream(fi);
-	//User user = (User)(writer.readObject());
-	//}
-	//catch(FileNotFoundException e) {
-	//	e.printStackTrace();
-	//}
-
-
-	//수정 끝부분
-	
 	public Login() {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,8 +27,6 @@ class Login extends JFrame{
 		wl.setSize(520, 3);
 		wl.setLocation(0,70);
 		wl.setBackground(new Color(255,255,255));
-		
-		
 		
 		JLabel title = new JLabel("로그인(注册)");
 		JLabel studentNum = new JLabel("학번");
@@ -139,11 +121,14 @@ class Login extends JFrame{
 				
 				String check = user.getPassword();
 				
+				
 				String password = password3.getText();
 
 				if(password.equals(check)) {
 					id = Integer.parseInt(num);
-					m = new MainUI(id); //2
+					
+					Student st = new Student(id);
+					m = new MainUI(st); //2
 					dispose();	
 				}
 				else {

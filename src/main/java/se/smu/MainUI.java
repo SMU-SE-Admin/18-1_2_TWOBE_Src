@@ -8,7 +8,10 @@ public class MainUI extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	Container c;
-	public MainUI(int id) {
+	Student st;
+	
+	public MainUI(Student st) {
+		this.st = st;
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -219,10 +222,74 @@ public class MainUI extends JFrame{
 		
 		setSize(1080, 960);
 		setVisible(true);
+		
+		// 로그아웃
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				Login l = new Login();
+				dispose();
+			}
+		});
+		
+		// 수강과목
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				AddSubject2 l = new AddSubject2();
+				dispose();
+			}
+		});
+		
+		
+		// 편집
+		todoedit1.addActionListener(new EditListener(0));
+		todoedit2.addActionListener(new EditListener(1));
+		todoedit3.addActionListener(new EditListener(2));
+		todoedit4.addActionListener(new EditListener(3));
+		todoedit5.addActionListener(new EditListener(4));
+		todoedit6.addActionListener(new EditListener(5));
+		todoedit7.addActionListener(new EditListener(6));
+		
+		// 삭제
+		tododel1.addActionListener(new DelListener(0));
+		tododel2.addActionListener(new DelListener(1));
+		tododel3.addActionListener(new DelListener(2));
+		tododel4.addActionListener(new DelListener(3));
+		tododel5.addActionListener(new DelListener(4));
+		tododel6.addActionListener(new DelListener(5));
+		tododel7.addActionListener(new DelListener(6));
+	
+	
 	}
 	
-	public static void main(String[] args) {
-		//MainUI mainUi = new MainUI();
+	// 편집
+	private class EditListener implements ActionListener{
+		int i;
+		
+		public EditListener(int i){
+			this.i = i;
+		}
+		
+		public void actionPerformed(ActionEvent e) {
+			EditTodoConfirm l = new EditTodoConfirm(st,i);
+			dispose();
+		}
 	}
+	
+	// 삭제
+	private class DelListener implements ActionListener{
+		int i;
+		
+		public DelListener(int i){
+			this.i = i;
+		}
+		
+		public void actionPerformed(ActionEvent e) {
+			
+			DeleteTodoConfirm l = new DeleteTodoConfirm(st,i);
+			dispose();
+		}
+	}
+	
+
 
 }
