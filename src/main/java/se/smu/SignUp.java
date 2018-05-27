@@ -1,4 +1,6 @@
 package se.smu;
+import java.util.Arrays; //수정된 부분
+import java.io.Serializable; //수정된 부분
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
@@ -10,6 +12,7 @@ public class SignUp extends JFrame{
 	
 	public SignUp() {
 		setTitle("To do list");
+
 		
 		Container c = getContentPane();
 		c.setBackground(new Color(184,255,255));
@@ -94,12 +97,27 @@ public class SignUp extends JFrame{
 		todoCancel.setLocation(940,360);
 		todoCancel.setBackground(new Color(255,255,255));
 		todoCancel.setSize(120,40);
-		
+		//수정한 부분 시작
+		todoConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String siUrl = todoName2.getText()+"_user.txt";
+				String a =todoDeadline2.getText();
+				String b=todoFinishDate2.getText();
+				String c=todoCompleted2.getText();
+				String d=todoImportant2.getText();
+				AddUser.add(siUrl, a, b, c, d);
+				dispose();
+				
+			}
+		});
+
+		//수정한 부분 끝
 		todoCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
 					dispose();						      
 			}
 		});
+
 
 		setSize(1080, 470);
 		setVisible(true);

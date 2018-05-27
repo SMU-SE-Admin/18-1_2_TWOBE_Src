@@ -3,13 +3,29 @@ import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
-
+import java.io.*;
 
 class Login extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Container c;
-	String stdNum="201411096";
-	String password="10301030";
+	String stdNum = "201411096";
+	String password = "10301030";
+
+
+	//수정 시작부분
+
+	//try {
+	//File src = new File("C:\\Users\\aaaaaa\\eclipse-workspace\\TWOBE" + siUrl +"_uer.txt");
+	//FileInputStream fi = new FileInputStream(src);
+	//ObjectInputStream writer = new ObjectInputStream(fi);
+	//User user = (User)(writer.readObject());
+	//}
+	//catch(FileNotFoundException e) {
+	//	e.printStackTrace();
+	//}
+
+
+	//수정 끝부분
 	
 	public Login() {
 		setTitle("To do list");
@@ -68,12 +84,12 @@ class Login extends JFrame{
 		btn2.setSize(130,20);
 		btn3.setLocation(380,300);
 		btn3.setSize(120,20);
-
+		
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FindPassword f; //1
 				
-				JButton btn1 = (JButton)e.getSource();
+				JButton btn = (JButton)e.getSource();
 				
 				if(true) {      
 					f = new FindPassword(); //2
@@ -91,7 +107,7 @@ class Login extends JFrame{
 				
 				if(true) {      
 					s = new SignUp(); //2
-	      
+						      
 				}
 
 			}
@@ -102,11 +118,25 @@ class Login extends JFrame{
 				MainUI m; //1
 				LoginError l;
 				JButton btn2 = (JButton)e.getSource();
-				
-				if(studentNum3.getText().equals("201411096") && password3.getText().equals("10301030")) {      
+				//수정 시작 부분
+				String siUrl = btn3.getText();
+				User user= null;
+				try {	
+					ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(siUrl,true));
+					user = (User)(((ObjectInput) writer).readObject());
+					writer.close();	
+					
+				}catch (Exception b) {
+					b.printStackTrace();
+				}
+
+				//studentNum3.getText().equals("201411096") && 
+				if(password3.getText().equals(user.getPassword())) {      
 					m = new MainUI(); //2
 					dispose();		      
 				}
+				
+				//수정 끝 부분
 				else {
 					l = new LoginError();
 				}
@@ -117,10 +147,14 @@ class Login extends JFrame{
 		
 		setSize(520, 390);
 		setVisible(true);
+		
 	}
 	
 	public static void main(String[] args) {
+		
+
 		Login login = new Login();
+
 	}
 
 }
