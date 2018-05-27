@@ -123,27 +123,38 @@ class Login extends JFrame{
 				AddUser main = new AddUser();
 				String num = studentNum3.getText();
 				User user=null;
-				try {
-				FileInputStream fileStream = new FileInputStream(num+".ser"); // 직렬화해서 썼던 파일을 다시 읽오는 역할
-				ObjectInputStream is = new ObjectInputStream(fileStream); // 읽어온 직렬화된 내용을 역직렬화 하는 역할
-
-				user = (User)is.readObject(); 
-				} catch (ClassNotFoundException o) {
-		            o.printStackTrace();
-		        } catch (IOException n) {
-		            n.printStackTrace();
-		        }
 				
-				String check = user.getPassword();
+				File f=new File(num+".ser");
+				if(f.isFile()){
+					try {
+					
 				
-				String password = password3.getText();
+						FileInputStream fileStream = new FileInputStream(num+".ser"); // 직렬화해서 썼던 파일을 다시 읽오는 역할
+				
+						ObjectInputStream is = new ObjectInputStream(fileStream); // 읽어온 직렬화된 내용을 역직렬화 하는 역할
+				
 
-				if(password.equals(check)) {
-					m = new MainUI(); //2
-					dispose();	
+						user = (User)is.readObject(); 
+					} catch (ClassNotFoundException o) {
+						o.printStackTrace();
+					} catch (IOException n) {
+						n.printStackTrace();
+					}
+				
+					String check = user.getPassword();
+					
+					String password = password3.getText();
+	
+					if(password.equals(check)) {
+						m = new MainUI(); //2
+						dispose();	
+					}
+					else {
+						l = new LoginError();
+					}
 				}
-				else {
-					l = new LoginError();
+				else{
+					l=new LoginError();
 				}
 			}
 		});

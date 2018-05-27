@@ -106,6 +106,7 @@ public class SignUp extends JFrame{
 		//수정한 부분 시작
 		todoConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Login l;
 				String num = todoName2.getText();
 				String a =todoDeadline2.getText();
 				String b=todoFinishDate2.getText();
@@ -127,6 +128,7 @@ public class SignUp extends JFrame{
 		            n.printStackTrace();
 		        }
 				dispose();
+				l=new Login();
 				
 			}
 		});
