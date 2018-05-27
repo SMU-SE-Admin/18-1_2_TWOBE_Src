@@ -45,12 +45,16 @@ public class DeleteTodoConfirm extends JFrame{
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
 				st.del_tdl(i);
+				MainUI l = new MainUI(st);
+				dispose();
+				
 			}
 		});
 		
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
 				MainUI l = new MainUI(st);
+				dispose();
 			}
 		});
 	}

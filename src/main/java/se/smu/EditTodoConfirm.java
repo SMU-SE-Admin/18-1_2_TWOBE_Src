@@ -44,12 +44,14 @@ public class EditTodoConfirm extends JFrame{
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
 				EditTodolistWindow l = new EditTodolistWindow(st,i);
+				dispose();
 			}
 		});
 		
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
 				MainUI l = new MainUI(st);
+				dispose();
 			}
 		});
 	}

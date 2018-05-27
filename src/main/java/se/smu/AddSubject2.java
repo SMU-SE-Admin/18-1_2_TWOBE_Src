@@ -10,8 +10,11 @@ import java.awt.event.*;
 public class AddSubject2 extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
+	Student st;
 	
 	public AddSubject2(Student st) {
+		this.st = st;
+	
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -327,66 +330,22 @@ public class AddSubject2 extends JFrame{
 			}
 		});
 		//이거 subject개수 만큼 달아주기
-		subjectadd1.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				AddTodolistWindow adw=new AddTodolistWindow(st);
-				
-				dispose();
-				
-			}
-		});
-		subjectadd2.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				AddTodolistWindow adw=new AddTodolistWindow(st);
-				
-				dispose();
-				
-			}
-		});
-		subjectadd3.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				AddTodolistWindow adw=new AddTodolistWindow(st);
-				
-				dispose();
-				
-			}
-		});
-		subjectadd4.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				AddTodolistWindow adw=new AddTodolistWindow(st);
-				
-				dispose();
-				
-			}
-		});
-		subjectadd5.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				AddTodolistWindow adw=new AddTodolistWindow(st);
-				
-				dispose();
-				
-			}
-		});
-		subjectadd6.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				AddTodolistWindow adw=new AddTodolistWindow(st);
-				
-				dispose();
-				
-			}
-		});
-		subjectadd7.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				AddTodolistWindow adw=new AddTodolistWindow(st);
-				
-				dispose();
-				
-			}
-		});
+		subjectadd1.addActionListener(new AddListener());
+		subjectadd2.addActionListener(new AddListener());
+		subjectadd3.addActionListener(new AddListener());
+		subjectadd4.addActionListener(new AddListener());
+		subjectadd5.addActionListener(new AddListener());
+		subjectadd6.addActionListener(new AddListener());
+		subjectadd7.addActionListener(new AddListener());
 	}
 	
-	public static void main(String[] args) {
-		//AddSubject2 addSubject2 = new AddSubject2();
+	private class AddListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent e){
+			AddTodolistWindow adw=new AddTodolistWindow(st);
+			dispose();
+			
+		}
 	}
-//
+
 }

@@ -113,6 +113,8 @@ public class EditTodolistWindow extends JFrame{
 				boolean Imp = (tdlImportant.equals("O")) ? true : false;
 				
 				st.edit_tdl(tdlName, tdlDeadline, tdlFinishDate, Com, Imp, i);
+				MainUI l = new MainUI(st);
+				dispose();
 				
 			}
 		});
