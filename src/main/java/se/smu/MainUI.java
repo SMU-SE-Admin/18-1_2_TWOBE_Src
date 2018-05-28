@@ -301,7 +301,12 @@ public class MainUI extends JFrame{
 		}
 		
 		public void actionPerformed(ActionEvent e) {
-			EditTodoConfirm l = new EditTodoConfirm(st,i);
+			if(st.getTarrName(i)==null){
+				TodoAddFirstError l = new TodoAddFirstError(st);
+			}else{
+				EditTodolistWindow l = new EditTodolistWindow(st,i);
+				
+			}
 			dispose();
 		}
 	}
@@ -315,8 +320,11 @@ public class MainUI extends JFrame{
 		}
 		
 		public void actionPerformed(ActionEvent e) {
-			
-			DeleteTodoConfirm l = new DeleteTodoConfirm(st,i);
+			if(st.getTarrName(i)==null){
+				TodoAddFirstError l = new TodoAddFirstError(st);
+			}else{
+				DeleteTodoConfirm l = new DeleteTodoConfirm(st,i);
+			}
 			dispose();
 		}
 	}

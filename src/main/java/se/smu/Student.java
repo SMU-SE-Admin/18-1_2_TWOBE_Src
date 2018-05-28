@@ -38,6 +38,9 @@ public class Student{
 		return s_arr[i].getProfesser();
 	}
 	public String getSarrName(int i){
+		if (s_arrcount==0){
+			return null;
+		}
 		return s_arr[i].getSubjectName();
 		
 	}

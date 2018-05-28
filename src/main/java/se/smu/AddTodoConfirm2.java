@@ -43,6 +43,7 @@ public class AddTodoConfirm2 extends JFrame{
 	
 	
 		btn1.addActionListener(new Listener(st));
+		btn2.addActionListener(new Listener(st));
 	}
 	
 	private class Listener implements ActionListener{

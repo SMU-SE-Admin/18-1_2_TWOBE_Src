@@ -112,8 +112,7 @@ public class EditTodolistWindow extends JFrame{
 				boolean Com = (tdlCompleted.equals("O")) ? true : false;
 				boolean Imp = (tdlImportant.equals("O")) ? true : false;
 				
-				st.edit_tdl(tdlName, tdlDeadline, tdlFinishDate, Com, Imp, i);
-				MainUI l = new MainUI(st);
+				EditTodoConfirm l = new EditTodoConfirm(st,tdlName, tdlDeadline, tdlFinishDate, Com, Imp, i);
 				dispose();
 				
 			}

@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class TodoAddFirstError extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	
-	public TodoAddFirstError() {
+	public TodoAddFirstError(Student st) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -42,10 +42,23 @@ public class TodoAddFirstError extends JFrame{
 		
 		setSize(520, 290);
 		setVisible(true);
+		
+		btn1.addActionListener(new Listener(st));
+		btn2.addActionListener(new Listener(st));
 	}
 	
-	public static void main(String[] args) {
-		TodoAddFirstError todoAddFirstError = new TodoAddFirstError();
+	private class Listener implements ActionListener{
+		Student st;
+		
+		public Listener(Student st){
+			this.st = st;
+		}
+		
+		public void actionPerformed(ActionEvent e){
+			MainUI l = new MainUI(st);
+			dispose();
+		}
+		
 	}
 
 }

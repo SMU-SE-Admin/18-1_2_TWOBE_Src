@@ -1,9 +1,6 @@
 package se.smu;
 import javax.swing.*;
 import javax.swing.event.*;
-
-
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -351,6 +348,7 @@ public class AddSubject2 extends JFrame{
 			}
 		});
 		
+		
 		// 수강과목 편집
 		subjectedit1.addActionListener(new EditListener(0));
 		subjectedit2.addActionListener(new EditListener(1));
@@ -392,9 +390,9 @@ public class AddSubject2 extends JFrame{
 				AddTodoConfirm2 l = new AddTodoConfirm2(st);
 			}else{
 				AddTodolistWindow l=new AddTodolistWindow(st,i);
-				dispose();
+				
 			}
-			
+			dispose();
 		}
 	}
 	
@@ -408,10 +406,11 @@ public class AddSubject2 extends JFrame{
 		
 		public void actionPerformed(ActionEvent e){
 			if (st.getSarrName(i)==null){
-				
+				AddTodoConfirm2 l = new AddTodoConfirm2(st);
 			}else{
 				EditSubjectWindow l = new EditSubjectWindow(st,i);
 			}
+			dispose();
 		}
 		
 	}
@@ -425,7 +424,12 @@ public class AddSubject2 extends JFrame{
 		}
 		
 		public void actionPerformed(ActionEvent e){
-			DeleteSubjectConfirm l = new DeleteSubjectConfirm(st,i);
+			if (st.getSarrName(i)==null){
+				AddTodoConfirm2 l = new AddTodoConfirm2(st);
+			}else{
+				DeleteSubjectConfirm l = new DeleteSubjectConfirm(st,i);
+			}
+			dispose();
 		}
 		
 	}
