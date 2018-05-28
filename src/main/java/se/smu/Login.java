@@ -134,7 +134,7 @@ class Login extends JFrame{
 				}
 				else {
 					l = new LoginError();
-					dispose();
+
 				}
 			}
 		});
