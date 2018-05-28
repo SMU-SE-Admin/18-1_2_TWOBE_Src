@@ -115,12 +115,7 @@ public class FindPassword extends JFrame{
 				}
 				else {
 					l = new FindPasswordError();
-					System.out.println(p);
-					System.out.println(user.getMajor());
-					System.out.println(user.getPassword());
-					System.out.println(user.getQues());
-					System.out.println(user.getStudentName());
-					System.out.println(user.getStudentNum());
+
 				}					      
 			} //수정 끝
 		});
