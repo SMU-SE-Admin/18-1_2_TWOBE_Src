@@ -263,15 +263,15 @@ public class MainUI extends JFrame{
 	      
 	      //과목명 정렬
 
-//	      SubjectName.addActionListener(new ActionListener() {
-//	          public void actionPerformed(ActionEvent e)  {
-//	             //st.sort("name");
-//	            // text1.setText(st.getTarrName(0));
-//	             //System.out.println(st.getTarrName(0));
-//	             dispose();
-//	             Login l=new Login();
-//	          }
-//	       });
+	      SubjectName.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent e)  {
+	             //st.sort("name");
+	            // text1.setText(st.getTarrName(0));
+	             //System.out.println(st.getTarrName(0));
+	             dispose();
+	             Login l=new Login();
+	          }
+	       });
 	     
 	      
 	      //마감기한 정렬
