@@ -4,17 +4,11 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
 public class EditSubject {
-	public static Subject[] edit(String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester,Subject[] arr,int count,String subUrl,String oldsub){
+	public static Subject[] edit(String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester,Subject[] arr,int count,String subUrl,int i){
 		Subject sj = new Subject(subjectName,professer,subjectDay,subjectTime,runYear,semester);
-		int index = 0;
 		
-		while(true){
-			if(arr[index].getSubjectName().equals(oldsub)){
-				arr[index]=sj;
-				break;
-			}
-			index++;
-		}
+		arr[i] = sj;
+		
 		try{
 			// 수정된 배열을 파일에 통째로 덮어씌움
 			ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(subUrl));
