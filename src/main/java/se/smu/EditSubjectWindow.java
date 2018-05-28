@@ -8,7 +8,7 @@ public class EditSubjectWindow extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
-	public EditSubjectWindow() {
+	public EditSubjectWindow(Student st,int i) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -64,6 +64,7 @@ public class EditSubjectWindow extends JFrame{
 		subjectDay2.setBackground(new Color(255,255,255));
 		c.add(subjectDay2);
 		
+		
 		JLabel subjectTime = new JLabel("시간(時間)");
 		subjectTime.setLocation(100,220);
 		subjectTime.setSize(150,40);
@@ -111,10 +112,24 @@ public class EditSubjectWindow extends JFrame{
 
 		setSize(1080, 520);
 		setVisible(true);
+		
+		// 수강과목 편집
+		subjectConfirm.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				String subjectName = subjectName2.getText();
+				String professer = subjectProf2.getText();
+				String subjectDay = subjectDay2.getText();
+				int subjectTime = Integer.parseInt(subjectTime2.getText());
+				int runYear = Integer.parseInt(subjectYear2.getText());
+				int semester = Integer.parseInt(subjectSemester2.getText());
+				
+				EditSubjectConfirm l = new EditSubjectConfirm(st,subjectName,professer,subjectDay,subjectTime,runYear,semester,i);
+				dispose();
+				
+			}
+		});
 	}
 	
-	public static void main(String[] args) {
-		EditSubjectWindow editSubjectWindow = new EditSubjectWindow();
-	}
+	
 
 }

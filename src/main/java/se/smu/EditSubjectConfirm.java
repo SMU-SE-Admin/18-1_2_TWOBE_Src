@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class EditSubjectConfirm extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	
-	public EditSubjectConfirm() {
+	public EditSubjectConfirm(Student st,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester,int i) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -40,10 +40,21 @@ public class EditSubjectConfirm extends JFrame{
 		
 		setSize(520, 290);
 		setVisible(true);
-	}
-	
-	public static void main(String[] args) {
-		EditSubjectConfirm editSubjectConfirm = new EditSubjectConfirm();
+		
+		btn1.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				st.edit_sub(subjectName,professer,subjectDay,subjectTime,runYear,semester,i);
+				AddSubject2 l = new AddSubject2(st);
+				dispose();
+			}
+		});
+		
+		btn2.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				AddSubject2 l = new AddSubject2(st);
+				dispose();
+			}
+		});
 	}
 
 }

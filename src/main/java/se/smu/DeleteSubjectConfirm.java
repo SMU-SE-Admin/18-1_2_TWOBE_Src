@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class DeleteSubjectConfirm extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	
-	public DeleteSubjectConfirm() {
+	public DeleteSubjectConfirm(Student st,int i) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -41,10 +41,23 @@ public class DeleteSubjectConfirm extends JFrame{
 		
 		setSize(520, 290);
 		setVisible(true);
+		
+		btn1.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				st.del_sub(i);
+				AddSubject2 l = new AddSubject2(st);
+				dispose();
+				
+			}
+		});
+		
+		btn2.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				AddSubject2 l = new AddSubject2(st);
+				dispose();
+				
+			}
+		});
 	}
 	
-	public static void main(String[] args) {
-		DeleteSubjectConfirm deleteSubjectConfirm = new DeleteSubjectConfirm();
-	}
-
 }

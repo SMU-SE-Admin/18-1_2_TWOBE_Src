@@ -341,13 +341,8 @@ public class AddSubject2 extends JFrame{
 		});
 		setSize(1080, 960);
 		setVisible(true);
-		//for문으로 출력하기
-//		for(int z=1;z==7;z++){
-//			if(st.s_arr[i]!=null){
-//				subjectName+z.setText(st.getSarrName(i));
-//				i++;
-//			}
-//		}
+
+		// 수강과목 추가
 		subjectplus.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				AddSubjectWindow asw = new AddSubjectWindow(st);
@@ -355,7 +350,26 @@ public class AddSubject2 extends JFrame{
 				
 			}
 		});
-		//이거 subject개수 만큼 달아주기
+		
+		// 수강과목 편집
+		subjectedit1.addActionListener(new EditListener(0));
+		subjectedit2.addActionListener(new EditListener(1));
+		subjectedit3.addActionListener(new EditListener(2));
+		subjectedit4.addActionListener(new EditListener(3));
+		subjectedit5.addActionListener(new EditListener(4));
+		subjectedit6.addActionListener(new EditListener(5));
+		subjectedit7.addActionListener(new EditListener(6));
+		
+		// 수강과목 삭제
+		subjectdel1.addActionListener(new DelListener(0));
+		subjectdel2.addActionListener(new DelListener(1));
+		subjectdel3.addActionListener(new DelListener(2));
+		subjectdel4.addActionListener(new DelListener(3));
+		subjectdel5.addActionListener(new DelListener(4));
+		subjectdel6.addActionListener(new DelListener(5));
+		subjectdel7.addActionListener(new DelListener(6));
+		
+		// todo 추가
 		subjectadd1.addActionListener(new AddListener(0));
 		subjectadd2.addActionListener(new AddListener(1));
 		subjectadd3.addActionListener(new AddListener(2));
@@ -365,6 +379,7 @@ public class AddSubject2 extends JFrame{
 		subjectadd7.addActionListener(new AddListener(6));
 	}
 	
+	// todo 추가
 	private class AddListener implements ActionListener{
 		int i;
 		
@@ -373,10 +388,46 @@ public class AddSubject2 extends JFrame{
 		}
 		
 		public void actionPerformed(ActionEvent e){
-			AddTodolistWindow adw=new AddTodolistWindow(st,i);
-			dispose();
+			if (st.getSarrName(i)==null){
+				AddTodoConfirm2 l = new AddTodoConfirm2(st);
+			}else{
+				AddTodolistWindow l=new AddTodolistWindow(st,i);
+				dispose();
+			}
 			
 		}
+	}
+	
+	// 수강과목 편집
+	private class EditListener implements ActionListener{
+		int i;
+		
+		public EditListener(int i){
+			this.i = i;
+		}
+		
+		public void actionPerformed(ActionEvent e){
+			if (st.getSarrName(i)==null){
+				
+			}else{
+				EditSubjectWindow l = new EditSubjectWindow(st,i);
+			}
+		}
+		
+	}
+	
+	// 수강과목 삭제
+	private class DelListener implements ActionListener{
+		int i;
+		
+		public DelListener(int i){
+			this.i = i;
+		}
+		
+		public void actionPerformed(ActionEvent e){
+			DeleteSubjectConfirm l = new DeleteSubjectConfirm(st,i);
+		}
+		
 	}
 
 }
