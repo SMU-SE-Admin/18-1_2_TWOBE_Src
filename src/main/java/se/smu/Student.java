@@ -32,6 +32,9 @@ public class Student{
 	}
 	
 	public String getTarrName(int i){
+		if (t_arrcount==0){
+			return null;
+		}
 		return t_arr[i].gettdlName();
 	}
 	public String getSarrPro(int i){
