@@ -37,6 +37,12 @@ public class AddSubject2 extends JFrame{
 		btn1.setSize(120,25);
 		btn1.setBackground(new Color(255,255,255));
 		
+		JButton btn11 = new JButton("메인화면으로(到主屏幕)");
+		c.add(btn11);
+		btn11.setLocation(30,10);
+		btn11.setSize(220,25);
+		btn11.setBackground(new Color(255,255,255));
+		
 		JLabel subjectProf = new JLabel("담당교수(教授)");
 		subjectProf.setLocation(360,80);
 		subjectProf.setSize(150,40);
@@ -329,8 +335,16 @@ public class AddSubject2 extends JFrame{
 			}
 		});
 		
-		// 메인화면으로
+		// 로그아웃
 		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				Login l = new Login();
+				dispose();
+			}
+		});
+		
+		// 메인화면으로
+		btn11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
 				MainUI l = new MainUI(st);
 				dispose();
