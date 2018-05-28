@@ -96,13 +96,13 @@ public class Student{
 				System.out.println(Arrays.toString(this.t_arr));
 				break;
 			case "finishDate" :
-				Todo_SortTodolist.FinishDate_sort(this.t_arr);
+				Arrays.sort(this.t_arr,Todo_SortTodolist.FinishDateComparator);
 				System.out.println(Arrays.toString(this.t_arr));
 				
 				break;
-			case "completed" :
-				Todo_SortTodolist.Completed_sort(this.t_arr);
-				System.out.println(Arrays.toString(this.t_arr));
+//			case "completed" :
+//				Todo_SortTodolist.Completed_sort(this.t_arr);
+//				System.out.println(Arrays.toString(this.t_arr));
 		
 		}	
 	}

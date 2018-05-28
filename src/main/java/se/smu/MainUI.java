@@ -253,6 +253,50 @@ public class MainUI extends JFrame{
 		
 		setSize(1080, 960);
 		setVisible(true);
+		todofavor.addActionListener(new ActionListener() {
+	    	  public void actionPerformed(ActionEvent e){
+	            st.bookMark();
+	            
+	         }
+	      });
+	      
+	      
+	      //과목명 정렬
+
+//	      SubjectName.addActionListener(new ActionListener() {
+//	          public void actionPerformed(ActionEvent e)  {
+//	             //st.sort("name");
+//	            // text1.setText(st.getTarrName(0));
+//	             //System.out.println(st.getTarrName(0));
+//	             dispose();
+//	             Login l=new Login();
+//	          }
+//	       });
+	     
+	      
+	      //마감기한 정렬
+	      todolistDeadline.addActionListener(new ActionListener() {
+	          public void actionPerformed(ActionEvent e)  {
+	              st.sort("daedline");
+	             text1.setText(st.getTarrName(0));
+	             System.out.println(st.getTarrName(0));
+	             dispose();
+	          }
+	       });
+	    
+	      //실제마감일 정렬
+	      todolistFinishDate.addActionListener(new ActionListener() {
+	    	  public void actionPerformed(ActionEvent e){
+	            st.sort("finishDate");
+	         }
+	      });
+	      
+	      //완료여부 정렬
+	      todolistCompleted.addActionListener(new ActionListener() {
+	    	  public void actionPerformed(ActionEvent e){
+	            st.sort("completed");
+	         }
+	      });
 		
 		// 로그아웃
 		btn1.addActionListener(new ActionListener() {

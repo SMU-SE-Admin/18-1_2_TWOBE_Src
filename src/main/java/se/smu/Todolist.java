@@ -7,8 +7,8 @@ public class Todolist implements Serializable{
 	 private String tdlName;
 	 private String tdlDeadline;
 	 private String tdlFinishDate=null;
-	 private Boolean tdlCompleted;
-	 private Boolean tdlImportant;
+	 private Boolean tdlCompleted=false;
+	 private Boolean tdlImportant=false;
 	   
 	 public Todolist(String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant){
 	      this.subjectName = subjectName;

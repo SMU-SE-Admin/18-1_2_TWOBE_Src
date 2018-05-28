@@ -17,21 +17,15 @@ public class Todo_SortTodolist  {
 			return d1.gettdlDeadline().compareTo(d2.gettdlDeadline());
 		}
 	};
-	public static void FinishDate_sort(Todolist[] arr){
-	      List<Todolist> finishList=Stream.of(arr)
-	            .filter(s->s.gettdlFinishDate()!=null)
-	            .collect(Collectors.toList());
-	      finishList.stream()
-	         .forEach(s->System.out.println(s.gettdlFinishDate()));
-	      
-	         
-	   }
-	public static void Completed_sort(Todolist[] arr){
-		List<Todolist> completedList=Stream.of(arr)
-				.filter(s->s.gettdlCompleted()==true)
-				.collect(Collectors.toList());
-		completedList.stream()
-			.forEach(s->System.out.println(s.gettdlCompleted()));
-		
-	}
+	public static Comparator<Todolist> FinishDateComparator=new Comparator<Todolist>(){
+		public int compare(Todolist d1, Todolist d2){
+			return d1.gettdlFinishDate().compareTo(d2.gettdlFinishDate());
+		}
+	};
+//	public static Comparator<Todolist> CompletedComparator=new Comparator<Todolist>(){
+//		public int compare(Todolist d1, Todolist d2){
+//			return d1.gettdlCompleted().compareTo(d2.gettdlCompleted());
+//		}
+//	};
+    
 }
