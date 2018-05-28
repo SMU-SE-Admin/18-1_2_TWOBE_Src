@@ -126,6 +126,7 @@ public class SignUp extends JFrame{
 		        } catch (IOException n) {
 		            n.printStackTrace();
 		        }
+				Login l = new Login();
 				dispose();
 				
 			}
@@ -133,18 +134,15 @@ public class SignUp extends JFrame{
 
 		//수정한 부분 끝
 		todoCancel.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {				
-					dispose();						      
+			public void actionPerformed(ActionEvent e) {	
+				Login l = new Login();
+				dispose();						      
 			}
 		});
 
 
 		setSize(1080, 470);
 		setVisible(true);
-	}
-	
-	public static void main(String[] args) {
-		SignUp signUp = new SignUp();
 	}
 
 }

@@ -94,6 +94,7 @@ class Login extends JFrame{
 				
 				if(true) {      
 					s = new SignUp(); //2
+					dispose();
 						      
 				}
 
@@ -133,6 +134,7 @@ class Login extends JFrame{
 				}
 				else {
 					l = new LoginError();
+					dispose();
 				}
 			}
 		});
