@@ -11,10 +11,10 @@ public class AddSubject2 extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	Student st;
-	
+	int i=0;
 	public AddSubject2(Student st) {
 		this.st = st;
-	
+	    
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -39,12 +39,6 @@ public class AddSubject2 extends JFrame{
 		btn1.setLocation(930,10);
 		btn1.setSize(120,25);
 		btn1.setBackground(new Color(255,255,255));
-		
-		JButton btn11 = new JButton("메인화면으로(到主屏幕)");
-		c.add(btn11);
-		btn11.setLocation(30,10);
-		btn11.setSize(220,25);
-		btn11.setBackground(new Color(255,255,255));
 		
 		JLabel subjectProf = new JLabel("담당교수(教授)");
 		subjectProf.setLocation(360,80);
@@ -102,6 +96,12 @@ public class AddSubject2 extends JFrame{
 		subjectSem1.setSize(130,40);
 		subjectSem1.setBackground(new Color(255,255,255));
 		c.add(subjectSem1);
+		if(st.s_arr[i]!=null){
+			subjectProf1.setText(st.getSarrPro(i));
+			
+			
+			i++;
+		}
 		
 		JButton subjectedit2 = new JButton("편집(汇编)");
 		c.add(subjectedit2);
@@ -325,8 +325,6 @@ public class AddSubject2 extends JFrame{
 		subjectplus.setLocation(10,830);
 		subjectplus.setBackground(new Color(255,255,255));
 		subjectplus.setSize(95,40);
-		
-		// 로그아웃
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
 				Login l = new Login();
@@ -335,15 +333,21 @@ public class AddSubject2 extends JFrame{
 		});
 		
 		// 메인화면으로
-		btn11.addActionListener(new ActionListener() {
+		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
 				MainUI l = new MainUI(st);
 				dispose();
 			}
 		});
-
 		setSize(1080, 960);
 		setVisible(true);
+		//for문으로 출력하기
+//		for(int z=1;z==7;z++){
+//			if(st.s_arr[i]!=null){
+//				subjectName+z.setText(st.getSarrName(i));
+//				i++;
+//			}
+//		}
 		subjectplus.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				AddSubjectWindow asw = new AddSubjectWindow(st);
@@ -352,19 +356,24 @@ public class AddSubject2 extends JFrame{
 			}
 		});
 		//이거 subject개수 만큼 달아주기
-		subjectadd1.addActionListener(new AddListener());
-		subjectadd2.addActionListener(new AddListener());
-		subjectadd3.addActionListener(new AddListener());
-		subjectadd4.addActionListener(new AddListener());
-		subjectadd5.addActionListener(new AddListener());
-		subjectadd6.addActionListener(new AddListener());
-		subjectadd7.addActionListener(new AddListener());
+		subjectadd1.addActionListener(new AddListener(0));
+		subjectadd2.addActionListener(new AddListener(1));
+		subjectadd3.addActionListener(new AddListener(2));
+		subjectadd4.addActionListener(new AddListener(3));
+		subjectadd5.addActionListener(new AddListener(4));
+		subjectadd6.addActionListener(new AddListener(5));
+		subjectadd7.addActionListener(new AddListener(6));
 	}
 	
 	private class AddListener implements ActionListener{
+		int i;
+		
+		public AddListener(int i){
+			this.i= i;
+		}
 		
 		public void actionPerformed(ActionEvent e){
-			AddTodolistWindow adw=new AddTodolistWindow(st);
+			AddTodolistWindow adw=new AddTodolistWindow(st,i);
 			dispose();
 			
 		}

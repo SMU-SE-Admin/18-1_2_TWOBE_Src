@@ -21,6 +21,7 @@ public class Student{
 		this.tdlUrl = num+"_todo.txt";
 		this.subUrl = num+"_sub.txt";
 	}
+
 	//add_sub 추가
 	public void add_sub(String s,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester){
 	      Subject sub = AddSubject.add(this.subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
@@ -64,10 +65,16 @@ public class Student{
 		return this.t_arrcount;
 	}
 	
-	public Todolist[] getarr(){
-		return this.t_arr;
+	public String getTarrName(int i){
+		return t_arr[i].gettdlName();
 	}
-	
+	public String getSarrPro(int i){
+		return s_arr[i].getProfesser();
+	}
+	public String getSarrName(int i){
+		return s_arr[i].getSubjectName();
+		
+	}
 	
 	public void sort(String s){
 		switch(s){

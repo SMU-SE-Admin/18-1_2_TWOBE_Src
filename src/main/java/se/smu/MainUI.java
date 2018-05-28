@@ -12,6 +12,7 @@ public class MainUI extends JFrame{
 	
 	public MainUI(Student st) {
 		this.st = st;
+		int i=0;
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -88,6 +89,12 @@ public class MainUI extends JFrame{
 		label1.setLocation(240, 196);
 		label1.setSize(50,50);
 		JTextField text1 = new JTextField();
+		if(st.t_arr[i]!=null){
+			text1.setText(st.getTarrName(i));
+			
+			i++;
+		}
+		
 		c.add(text1);
 		text1.setLocation(350, 196);
 		text1.setSize(600,50);
@@ -108,6 +115,10 @@ public class MainUI extends JFrame{
 		label2.setLocation(240, 296);
 		label2.setSize(50,50);
 		JTextField text2 = new JTextField();
+		if(st.t_arr[i]!=null){
+			text2.setText(st.getTarrName(i));
+			i++;
+		}
 		c.add(text2);
 		text2.setLocation(350, 296);
 		text2.setSize(600,50);
@@ -127,6 +138,10 @@ public class MainUI extends JFrame{
 		label3.setLocation(240, 396);
 		label3.setSize(50,50);
 		JTextField text3 = new JTextField();
+		if(st.t_arr[i]!=null){
+			text3.setText(st.getTarrName(i));
+			i++;
+		}
 		c.add(text3);
 		text3.setLocation(350, 396);
 		text3.setSize(600,50);
@@ -146,6 +161,10 @@ public class MainUI extends JFrame{
 		label4.setLocation(240, 496);
 		label4.setSize(50,50);
 		JTextField text4 = new JTextField();
+		if(st.t_arr[i]!=null){
+			text4.setText(st.getTarrName(i));
+			i++;
+		}
 		c.add(text4);
 		text4.setLocation(350, 496);
 		text4.setSize(600,50);
@@ -165,6 +184,10 @@ public class MainUI extends JFrame{
 		label5.setLocation(240, 596);
 		label5.setSize(50,50);
 		JTextField text5 = new JTextField();
+		if(st.t_arr[i]!=null){
+			text5.setText(st.getTarrName(i));
+			i++;
+		}
 		c.add(text5);
 		text5.setLocation(350, 596);
 		text5.setSize(600,50);
@@ -184,6 +207,10 @@ public class MainUI extends JFrame{
 		label6.setLocation(240, 696);
 		label6.setSize(50,50);
 		JTextField text6 = new JTextField();
+		if(st.t_arr[i]!=null){
+			text6.setText(st.getTarrName(i));
+			i++;
+		}
 		c.add(text6);
 		text6.setLocation(350, 696);
 		text6.setSize(600,50);
@@ -203,6 +230,10 @@ public class MainUI extends JFrame{
 		label7.setLocation(240, 796);
 		label7.setSize(50,50);
 		JTextField text7 = new JTextField();
+		if(st.t_arr[i]!=null){
+			text7.setText(st.getTarrName(i));
+			i++;
+		}
 		c.add(text7);
 		text7.setLocation(350, 796);
 		text7.setSize(600,50);

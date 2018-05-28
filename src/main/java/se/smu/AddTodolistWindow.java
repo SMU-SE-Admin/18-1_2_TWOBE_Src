@@ -10,7 +10,9 @@ public class AddTodolistWindow extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Font f2 = new Font("돋움", Font.BOLD, 9);
 	
-	public AddTodolistWindow(Student st) {
+	public AddTodolistWindow(Student st,int i) {
+		
+		String subjectName;
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -105,16 +107,18 @@ public class AddTodolistWindow extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				
 				String tdlUrl=st.tdlUrl;
-				String subjectName="00";
+				String subjectName=st.getSarrName(i);
 				String tdlName=todoName2.getText();
 				String tdlDeadline=todoDeadline2.getText();
 				String tdlFinishDate=todoFinishDate2.getText();
 				Boolean tdlCompleted=Boolean.valueOf(todoCompleted2.getText()).booleanValue();
 				Boolean tdlImportant=Boolean.valueOf(todoImportant2.getText()).booleanValue();
 				
-			
+			    
 			    st.add_tdl(tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
+			   System.out.println(subjectName);
 			    MainUI m=new MainUI(st);
+			    System.out.println();
 			  
 			    dispose();
 			    
