@@ -50,9 +50,5 @@ public class FindPasswordError extends JFrame{
 		});
 		
 	}
-	
-	public static void main(String[] args) {
-		//FindPasswordError findPasswordError = new FindPasswordError();
-	}
 
 }

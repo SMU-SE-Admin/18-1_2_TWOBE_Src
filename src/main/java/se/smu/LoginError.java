@@ -51,9 +51,5 @@ public class LoginError extends JFrame{
 		});
 		
 	}
-	
-	public static void main(String[] args) {
-		//LoginError loginerror = new LoginError();
-	}
 
 }

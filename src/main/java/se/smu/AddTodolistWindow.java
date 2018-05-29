@@ -134,9 +134,5 @@ public class AddTodolistWindow extends JFrame{
 		});
 	}
 	
-	public static void main(String[] args) {
-		//AddTodolistWindow addTodolistWindow = new AddTodolistWindow();
-	}
-
 }
 

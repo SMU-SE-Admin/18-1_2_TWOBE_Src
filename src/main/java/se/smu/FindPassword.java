@@ -126,10 +126,6 @@ public class FindPassword extends JFrame{
 			}
 		});
 	}
-	
-	public static void main(String[] args) {
-		//FindPassword findPassword = new FindPassword();
-	}
 
 }
 

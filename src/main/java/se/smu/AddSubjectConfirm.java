@@ -43,8 +43,4 @@ public class AddSubjectConfirm extends JFrame{
 		setVisible(true);
 	}
 	
-	public static void main(String[] args) {
-		AddSubjectConfirm addSubjectConfirm = new AddSubjectConfirm();
-	}
-
 }

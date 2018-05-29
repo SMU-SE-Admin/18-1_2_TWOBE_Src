@@ -40,9 +40,5 @@ public class TodoEditError extends JFrame{
 		setSize(360, 180);
 		setVisible(true);
 	}
-	
-	public static void main(String[] args) {
-		//TodoEditError todoEditError = new TodoEditError();
-	}
 
 }

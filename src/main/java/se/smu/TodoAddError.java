@@ -41,8 +41,4 @@ public class TodoAddError extends JFrame{
 		setVisible(true);
 	}
 	
-	public static void main(String[] args) {
-		//TodoAddError todoAddError = new TodoAddError();
-	}
-
 }

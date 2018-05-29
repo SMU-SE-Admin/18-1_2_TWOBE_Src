@@ -126,8 +126,5 @@ public class AddSubject3 extends JFrame{
 		setVisible(true);
 	}
 	
-	public static void main(String[] args) {
-		//AddSubject3 addSubject3 = new AddSubject3();
-	}
 
 }

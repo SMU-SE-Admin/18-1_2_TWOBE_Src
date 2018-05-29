@@ -43,9 +43,5 @@ public class AddSubject1 extends JFrame{
 		setVisible(true);
 		
 	}
-	
-	public static void main(String[] args) {
-		//AddSubject1 addSubject1 = new AddSubject1();
-	}
 
 }

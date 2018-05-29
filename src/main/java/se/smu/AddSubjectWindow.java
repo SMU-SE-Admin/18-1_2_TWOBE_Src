@@ -139,9 +139,5 @@ public class AddSubjectWindow extends JFrame{
 			}
 		});
 	}
-	
-	public static void main(String[] args) {
-		//AddSubjectWindow addSubjectWindow = new AddSubjectWindow();
-	}
 
 }

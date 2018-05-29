@@ -40,9 +40,5 @@ public class SubjectAddError extends JFrame{
 		setSize(360, 180);
 		setVisible(true);
 	}
-	
-	public static void main(String[] args) {
-		//SubjectAddError subjectAddError = new SubjectAddError();
-	}
 
 }
