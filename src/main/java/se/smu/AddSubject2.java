@@ -145,10 +145,10 @@ public class AddSubject2 extends JFrame{
 		subjectSem2.setBackground(new Color(255,255,255));
 		c.add(subjectSem2);
 		if(st.s_arr[i]!=null){
-	         subjectProf1.setText(st.getSarrPro(i));
-	         subjectName1.setText(st.getSarrName(i));
-	         subjectDay1.setText(st.getSarrDay(i));
-	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         subjectProf2.setText(st.getSarrPro(i));
+	         subjectName2.setText(st.getSarrName(i));
+	         subjectDay2.setText(st.getSarrDay(i));
+	         subjectSem2.setText(Integer.toString(st.getSarrSem(i)));
 	         
 	         
 	         i++;
@@ -190,10 +190,10 @@ public class AddSubject2 extends JFrame{
 		subjectSem3.setBackground(new Color(255,255,255));
 		c.add(subjectSem3);
 		if(st.s_arr[i]!=null){
-	         subjectProf1.setText(st.getSarrPro(i));
-	         subjectName1.setText(st.getSarrName(i));
-	         subjectDay1.setText(st.getSarrDay(i));
-	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         subjectProf3.setText(st.getSarrPro(i));
+	         subjectName3.setText(st.getSarrName(i));
+	         subjectDay3.setText(st.getSarrDay(i));
+	         subjectSem3.setText(Integer.toString(st.getSarrSem(i)));
 	         
 	         
 	         i++;
@@ -234,10 +234,10 @@ public class AddSubject2 extends JFrame{
 		subjectSem4.setBackground(new Color(255,255,255));
 		c.add(subjectSem4);
 		if(st.s_arr[i]!=null){
-	         subjectProf1.setText(st.getSarrPro(i));
-	         subjectName1.setText(st.getSarrName(i));
-	         subjectDay1.setText(st.getSarrDay(i));
-	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         subjectProf4.setText(st.getSarrPro(i));
+	         subjectName4.setText(st.getSarrName(i));
+	         subjectDay4.setText(st.getSarrDay(i));
+	         subjectSem4.setText(Integer.toString(st.getSarrSem(i)));
 	         
 	         
 	         i++;
@@ -278,10 +278,10 @@ public class AddSubject2 extends JFrame{
 		subjectSem5.setBackground(new Color(255,255,255));
 		c.add(subjectSem5);
 		if(st.s_arr[i]!=null){
-	         subjectProf1.setText(st.getSarrPro(i));
-	         subjectName1.setText(st.getSarrName(i));
-	         subjectDay1.setText(st.getSarrDay(i));
-	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         subjectProf5.setText(st.getSarrPro(i));
+	         subjectName5.setText(st.getSarrName(i));
+	         subjectDay5.setText(st.getSarrDay(i));
+	         subjectSem5.setText(Integer.toString(st.getSarrSem(i)));
 	         
 	         
 	         i++;
@@ -322,10 +322,10 @@ public class AddSubject2 extends JFrame{
 		subjectSem6.setBackground(new Color(255,255,255));
 		c.add(subjectSem6);
 		if(st.s_arr[i]!=null){
-	         subjectProf1.setText(st.getSarrPro(i));
-	         subjectName1.setText(st.getSarrName(i));
-	         subjectDay1.setText(st.getSarrDay(i));
-	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         subjectProf6.setText(st.getSarrPro(i));
+	         subjectName6.setText(st.getSarrName(i));
+	         subjectDay6.setText(st.getSarrDay(i));
+	         subjectSem6.setText(Integer.toString(st.getSarrSem(i)));
 	         
 	         
 	         i++;
@@ -366,10 +366,10 @@ public class AddSubject2 extends JFrame{
 		subjectSem7.setBackground(new Color(255,255,255));
 		c.add(subjectSem7);
 		if(st.s_arr[i]!=null){
-	         subjectProf1.setText(st.getSarrPro(i));
-	         subjectName1.setText(st.getSarrName(i));
-	         subjectDay1.setText(st.getSarrDay(i));
-	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         subjectProf7.setText(st.getSarrPro(i));
+	         subjectName7.setText(st.getSarrName(i));
+	         subjectDay7.setText(st.getSarrDay(i));
+	         subjectSem7.setText(Integer.toString(st.getSarrSem(i)));
 	         
 	         
 	         i++;

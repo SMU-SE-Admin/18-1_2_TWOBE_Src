@@ -52,7 +52,12 @@ public class Student{
 		return s_arr[i].getSubjectName();
 		
 	}
-
+    public String getSarrDay(int i){
+        return s_arr[i].getSubjectDay();
+     }
+     public int getSarrSem(int i){
+        return s_arr[i].getSemester();
+     }
 
 	//subject
 	public void add_sub(String s,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester){
