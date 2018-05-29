@@ -17,6 +17,9 @@ public class Todo_SortTodolist  {
 		for (int i=0;i<count;i++){
 			System.out.println(arr[i]);
 			for (int j=0;j<count;j++){
+				if (t_arr[j]==null){
+					continue;
+				}
 				if (arr[i].equals(t_arr[j].getSubjectName())){
 					narr[i] = t_arr[j];
 					t_arr[j] = null;
@@ -41,8 +44,10 @@ public class Todo_SortTodolist  {
 		Arrays.sort(arr);
 		
 		for (int i=0;i<count;i++){
-			System.out.println(arr[i]);
 			for (int j=0;j<count;j++){
+				if (t_arr[j]==null){
+					continue;
+				}
 				if (arr[i].equals(t_arr[j].gettdlDeadline())){
 					narr[i] = t_arr[j];
 					t_arr[j] = null;
