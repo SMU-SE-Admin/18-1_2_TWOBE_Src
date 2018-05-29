@@ -14,12 +14,15 @@ public class Student{
 	Subject s_arr[] = new Subject[100];
 	String tdlUrl;
 	String subUrl;
-	
+	Boolean check=false;
 	
 	public Student(int num){
 		this.StudentNum = num;
 		this.tdlUrl = num+"_todo.txt";
 		this.subUrl = num+"_sub.txt";
+	}
+	public boolean getBoolean(){
+		return this.check;
 	}
 	
 	//return

@@ -67,7 +67,7 @@ public class AddTodolistWindow extends JFrame{
 		todoFinishDate2.setBackground(new Color(255,255,255));
 		c.add(todoFinishDate2);
 		
-		JLabel todoCompleted = new JLabel("완료여부(狀態完成)");
+		JLabel todoCompleted = new JLabel("완료여부(狀態完成)(only true or false!)");
 		todoCompleted.setLocation(100,220);
 		todoCompleted.setSize(150,40);
 		todoCompleted.setBackground(new Color(255,255,255));
@@ -78,7 +78,7 @@ public class AddTodolistWindow extends JFrame{
 		todoCompleted2.setBackground(new Color(255,255,255));
 		c.add(todoCompleted2);
 		
-		JLabel todoImportant = new JLabel("중요여부(也罷)");
+		JLabel todoImportant = new JLabel("중요여부(也罷)(only true or false!)");
 		todoImportant.setLocation(100,270);
 		todoImportant.setSize(150,40);
 		todoImportant.setBackground(new Color(255,255,255));

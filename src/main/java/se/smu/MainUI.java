@@ -89,16 +89,18 @@ public class MainUI extends JFrame{
 		label1.setLocation(240, 196);
 		label1.setSize(50,50);
 		JTextField text1 = new JTextField();
-		if(st.t_arr[i]!=null){
-			text1.setText(st.getTarrName(i));
-			
-			i++;
-		}
-		
 		c.add(text1);
 		text1.setLocation(350, 196);
 		text1.setSize(600,50);
-		
+		if(st.t_arr[i]!=null){
+            // 완료항목 숨기기여부 체크   // 
+			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
+				text1.setText("");
+			}else{
+				text1.setText(st.getTarrName(i));
+			}
+         i++;
+		}
 
 		JButton todoedit2 = new JButton("편집(汇编)");
 		c.add(todoedit2);
@@ -116,8 +118,13 @@ public class MainUI extends JFrame{
 		label2.setSize(50,50);
 		JTextField text2 = new JTextField();
 		if(st.t_arr[i]!=null){
-			text2.setText(st.getTarrName(i));
-			i++;
+            // 완료항목 숨기기여부 체크   // 
+			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
+				text2.setText("");
+			}else{
+				text2.setText(st.getTarrName(i));
+			}
+         i++;
 		}
 		c.add(text2);
 		text2.setLocation(350, 296);
@@ -139,8 +146,13 @@ public class MainUI extends JFrame{
 		label3.setSize(50,50);
 		JTextField text3 = new JTextField();
 		if(st.t_arr[i]!=null){
-			text3.setText(st.getTarrName(i));
-			i++;
+            // 완료항목 숨기기여부 체크   // 
+			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
+				text3.setText("");
+			}else{
+				text3.setText(st.getTarrName(i));
+			}
+         i++;
 		}
 		c.add(text3);
 		text3.setLocation(350, 396);
@@ -162,8 +174,13 @@ public class MainUI extends JFrame{
 		label4.setSize(50,50);
 		JTextField text4 = new JTextField();
 		if(st.t_arr[i]!=null){
-			text4.setText(st.getTarrName(i));
-			i++;
+            // 완료항목 숨기기여부 체크   // 
+			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
+				text4.setText("");
+			}else{
+				text4.setText(st.getTarrName(i));
+			}
+         i++;
 		}
 		c.add(text4);
 		text4.setLocation(350, 496);
@@ -185,8 +202,13 @@ public class MainUI extends JFrame{
 		label5.setSize(50,50);
 		JTextField text5 = new JTextField();
 		if(st.t_arr[i]!=null){
-			text5.setText(st.getTarrName(i));
-			i++;
+            // 완료항목 숨기기여부 체크   // 
+			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
+				text5.setText("");
+			}else{
+				text5.setText(st.getTarrName(i));
+			}
+         i++;
 		}
 		c.add(text5);
 		text5.setLocation(350, 596);
@@ -208,8 +230,13 @@ public class MainUI extends JFrame{
 		label6.setSize(50,50);
 		JTextField text6 = new JTextField();
 		if(st.t_arr[i]!=null){
-			text6.setText(st.getTarrName(i));
-			i++;
+            // 완료항목 숨기기여부 체크   // 
+			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
+				text6.setText("");
+			}else{
+				text6.setText(st.getTarrName(i));
+			}
+         i++;
 		}
 		c.add(text6);
 		text6.setLocation(350, 696);
@@ -231,8 +258,13 @@ public class MainUI extends JFrame{
 		label7.setSize(50,50);
 		JTextField text7 = new JTextField();
 		if(st.t_arr[i]!=null){
-			text7.setText(st.getTarrName(i));
-			i++;
+            // 완료항목 숨기기여부 체크   // 
+			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
+				text7.setText("");
+			}else{
+				text7.setText(st.getTarrName(i));
+			}
+         i++;
 		}
 		c.add(text7);
 		text7.setLocation(350, 796);
@@ -253,7 +285,21 @@ public class MainUI extends JFrame{
 		
 		setSize(1080, 960);
 		setVisible(true);
-		
+		//완료항목 숨기기
+	     hideTodo.addItemListener(new ItemListener() {
+	          @Override
+	          public void itemStateChanged(ItemEvent e) {
+	              if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
+	            	  	st.check=true;
+	            	  	MainUI l=new MainUI(st);
+	            	  	
+	              } else {//checkbox has been deselected
+	            	  st.check=false;
+	                 MainUI l=new MainUI(st);
+	             
+	              };
+	          }
+	      });
 		
 		// 로그아웃
 		btn1.addActionListener(new ActionListener() {
