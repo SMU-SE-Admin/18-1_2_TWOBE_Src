@@ -105,13 +105,12 @@ public class Student{
 				this.t_arr = Todo_SortTodolist.Deadline_sort(this.t_arr,this.t_arrcount);
 				break;
 			case "finishDate" :
-				Todo_SortTodolist.FinishDate_sort(this.t_arr);
-				System.out.println(Arrays.toString(this.t_arr));
+				this.t_arr=Todo_SortTodolist.FinishDate_sort(this.t_arr,this.t_arrcount);
 				
 				break;
 			case "completed" :
-				Todo_SortTodolist.Completed_sort(this.t_arr);
-				System.out.println(Arrays.toString(this.t_arr));
+				this.t_arr=Todo_SortTodolist.Completed_sort(this.t_arr,this.t_arrcount);
+			
 		
 		}	
 	}

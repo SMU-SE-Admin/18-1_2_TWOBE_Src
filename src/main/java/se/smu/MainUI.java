@@ -314,14 +314,19 @@ public class MainUI extends JFrame{
 	      todolistFinishDate.addActionListener(new ActionListener() {
 	    	  public void actionPerformed(ActionEvent e){
 	            st.sort("finishDate");
+	            MainUI l=new MainUI(st);
+	            dispose();
 	         }
 	      });
 	      
 	      //완료여부 정렬
+	
 	      todolistCompleted.addActionListener(new ActionListener() {
 	    	  public void actionPerformed(ActionEvent e){
-	            st.sort("completed");
-	         }
+		            st.sort("completed");
+		            MainUI l=new MainUI(st);
+		            dispose();
+		         }
 	      });
 	
 	}
