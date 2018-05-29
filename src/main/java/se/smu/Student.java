@@ -48,6 +48,12 @@ public class Student{
 		
 	}
 
+	 public String getSarrDay(int i){
+        return s_arr[i].getSubjectDay();
+     }
+     public int getSarrSem(int i){
+        return s_arr[i].getSemester();
+     }
 	//subject
 	public void add_sub(String s,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester){
 	      Subject sub = AddSubject.add(this.subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);

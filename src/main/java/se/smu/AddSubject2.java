@@ -100,10 +100,13 @@ public class AddSubject2 extends JFrame{
 		subjectSem1.setBackground(new Color(255,255,255));
 		c.add(subjectSem1);
 		if(st.s_arr[i]!=null){
-			subjectProf1.setText(st.getSarrPro(i));
-			
-			
-			i++;
+		         subjectProf1.setText(st.getSarrPro(i));
+		         subjectName1.setText(st.getSarrName(i));
+		         subjectDay1.setText(st.getSarrDay(i));
+		         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+		         
+		         
+		         i++;
 		}
 		
 		JButton subjectedit2 = new JButton("편집(汇编)");
@@ -141,6 +144,15 @@ public class AddSubject2 extends JFrame{
 		subjectSem2.setSize(130,40);
 		subjectSem2.setBackground(new Color(255,255,255));
 		c.add(subjectSem2);
+		if(st.s_arr[i]!=null){
+	         subjectProf1.setText(st.getSarrPro(i));
+	         subjectName1.setText(st.getSarrName(i));
+	         subjectDay1.setText(st.getSarrDay(i));
+	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         
+	         
+	         i++;
+	}
 		
 		JButton subjectedit3 = new JButton("편집(汇编)");
 		c.add(subjectedit3);
@@ -177,7 +189,15 @@ public class AddSubject2 extends JFrame{
 		subjectSem3.setSize(130,40);
 		subjectSem3.setBackground(new Color(255,255,255));
 		c.add(subjectSem3);
-		
+		if(st.s_arr[i]!=null){
+	         subjectProf1.setText(st.getSarrPro(i));
+	         subjectName1.setText(st.getSarrName(i));
+	         subjectDay1.setText(st.getSarrDay(i));
+	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         
+	         
+	         i++;
+	}
 		JButton subjectedit4 = new JButton("편집(汇编)");
 		c.add(subjectedit4);
 		subjectedit4.setLocation(10,430);
@@ -213,7 +233,15 @@ public class AddSubject2 extends JFrame{
 		subjectSem4.setSize(130,40);
 		subjectSem4.setBackground(new Color(255,255,255));
 		c.add(subjectSem4);
-		
+		if(st.s_arr[i]!=null){
+	         subjectProf1.setText(st.getSarrPro(i));
+	         subjectName1.setText(st.getSarrName(i));
+	         subjectDay1.setText(st.getSarrDay(i));
+	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         
+	         
+	         i++;
+	}
 		JButton subjectedit5 = new JButton("편집(汇编)");
 		c.add(subjectedit5);
 		subjectedit5.setLocation(10,530);
@@ -249,7 +277,15 @@ public class AddSubject2 extends JFrame{
 		subjectSem5.setSize(130,40);
 		subjectSem5.setBackground(new Color(255,255,255));
 		c.add(subjectSem5);
-		
+		if(st.s_arr[i]!=null){
+	         subjectProf1.setText(st.getSarrPro(i));
+	         subjectName1.setText(st.getSarrName(i));
+	         subjectDay1.setText(st.getSarrDay(i));
+	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         
+	         
+	         i++;
+	}
 		JButton subjectedit6 = new JButton("편집(汇编)");
 		c.add(subjectedit6);
 		subjectedit6.setLocation(10,630);
@@ -285,7 +321,15 @@ public class AddSubject2 extends JFrame{
 		subjectSem6.setSize(130,40);
 		subjectSem6.setBackground(new Color(255,255,255));
 		c.add(subjectSem6);
-		
+		if(st.s_arr[i]!=null){
+	         subjectProf1.setText(st.getSarrPro(i));
+	         subjectName1.setText(st.getSarrName(i));
+	         subjectDay1.setText(st.getSarrDay(i));
+	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         
+	         
+	         i++;
+	}
 		JButton subjectedit7 = new JButton("편집(汇编)");
 		c.add(subjectedit7);
 		subjectedit7.setLocation(10,730);
@@ -321,7 +365,15 @@ public class AddSubject2 extends JFrame{
 		subjectSem7.setSize(130,40);
 		subjectSem7.setBackground(new Color(255,255,255));
 		c.add(subjectSem7);
-		
+		if(st.s_arr[i]!=null){
+	         subjectProf1.setText(st.getSarrPro(i));
+	         subjectName1.setText(st.getSarrName(i));
+	         subjectDay1.setText(st.getSarrDay(i));
+	         subjectSem1.setText(Integer.toString(st.getSarrSem(i)));
+	         
+	         
+	         i++;
+	}
 		
 		JButton subjectplus = new JButton("+");
 		c.add(subjectplus);
