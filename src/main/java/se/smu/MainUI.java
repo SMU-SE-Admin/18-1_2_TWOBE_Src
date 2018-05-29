@@ -19,7 +19,6 @@ public class MainUI extends JFrame{
 		c = getContentPane();
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
-
 		
 		JPanel wl = new JPanel();
 		c.add(wl);

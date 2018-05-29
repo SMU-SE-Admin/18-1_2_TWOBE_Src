@@ -15,7 +15,6 @@ public class Student{
 	String tdlUrl;
 	String subUrl;
 	Boolean check=false;
-	
 	public Student(int num){
 		this.StudentNum = num;
 		this.tdlUrl = num+"_todo.txt";

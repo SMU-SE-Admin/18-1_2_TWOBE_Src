@@ -77,7 +77,7 @@ public class AddTodolistWindow extends JFrame{
 		todoCompleted2.setSize(650,40);
 		todoCompleted2.setBackground(new Color(255,255,255));
 		c.add(todoCompleted2);
-		
+	
 		JLabel todoImportant = new JLabel("중요여부(也罷)(only true or false!)");
 		todoImportant.setLocation(100,270);
 		todoImportant.setSize(150,40);
