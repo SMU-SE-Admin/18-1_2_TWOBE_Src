@@ -3,7 +3,7 @@ package se.smu;
 import java.util.Arrays;
 
 
-import java.io.Serializable; //추가한 부분
+import java.io.Serializable; 
 
 
 public class Student{
@@ -30,7 +30,12 @@ public class Student{
 	public int getcount(){
 		return this.t_arrcount;
 	}
-	
+	public Todolist[] gettd(){
+		return this.t_arr;
+	}
+	public boolean getImp(int i){
+		return this.t_arr[i].gettdlImportant();
+	}
 	public String getTarrName(int i){
 		if (t_arrcount==0){
 			return null;
@@ -48,12 +53,7 @@ public class Student{
 		
 	}
 
-	 public String getSarrDay(int i){
-        return s_arr[i].getSubjectDay();
-     }
-     public int getSarrSem(int i){
-        return s_arr[i].getSemester();
-     }
+
 	//subject
 	public void add_sub(String s,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester){
 	      Subject sub = AddSubject.add(this.subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
@@ -94,21 +94,19 @@ public class Student{
 	public void sort(String s){
 		switch(s){
 			case "name" :
-				Arrays.sort(this.t_arr,Todo_SortTodolist.NameComparator);
-				System.out.println(Arrays.toString(this.t_arr));
+				this.t_arr = Todo_SortTodolist.Name_sort(this.t_arr,this.t_arrcount);
 				break;
 			case "deadline"  :
-				Arrays.sort(this.t_arr,Todo_SortTodolist.DeadlineComparator);
-				System.out.println(Arrays.toString(this.t_arr));
+				this.t_arr = Todo_SortTodolist.Deadline_sort(this.t_arr,this.t_arrcount);
 				break;
 			case "finishDate" :
-				Arrays.sort(this.t_arr,Todo_SortTodolist.FinishDateComparator);
+				Todo_SortTodolist.FinishDate_sort(this.t_arr);
 				System.out.println(Arrays.toString(this.t_arr));
 				
 				break;
-//			case "completed" :
-//				Todo_SortTodolist.Completed_sort(this.t_arr);
-//				System.out.println(Arrays.toString(this.t_arr));
+			case "completed" :
+				Todo_SortTodolist.Completed_sort(this.t_arr);
+				System.out.println(Arrays.toString(this.t_arr));
 		
 		}	
 	}

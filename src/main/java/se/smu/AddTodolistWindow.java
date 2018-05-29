@@ -116,9 +116,7 @@ public class AddTodolistWindow extends JFrame{
 				
 			    
 			    st.add_tdl(tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
-			   System.out.println(subjectName);
 			    MainUI m=new MainUI(st);
-			    System.out.println();
 			  
 			    dispose();
 			    
