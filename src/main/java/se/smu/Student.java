@@ -23,7 +23,6 @@ public class Student{
 	public boolean getBoolean(){
 		return this.check;
 	}
-	
 	//return
 	public int getSN(){
 		return this.StudentNum;
