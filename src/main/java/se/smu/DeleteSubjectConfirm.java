@@ -44,9 +44,18 @@ public class DeleteSubjectConfirm extends JFrame{
 		
 		btn1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+				String subName=st.s_arr[i].getSubjectName();
 				st.del_sub(i);
+   
 				AddSubject2 l = new AddSubject2(st);
 				dispose();
+				for(int j=0; j<=st.t_arrcount-1;j++){
+					if(st.t_arr[j].getSubjectName()==subName){
+						st.del_tdl(j);
+						j--;
+						
+					};
+				};
 				
 			}
 		});
