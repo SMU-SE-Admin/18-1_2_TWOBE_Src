@@ -10,8 +10,7 @@ import java.io.*;
 class Login extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	private Container c;
-	String stdNum = "201411096";
-	String password = "10301030";
+
 	int id;
 
 	public Login() {
