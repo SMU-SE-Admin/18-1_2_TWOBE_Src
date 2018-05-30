@@ -112,16 +112,8 @@ class Login extends JFrame{
 				try {
 				FileInputStream fileStream = new FileInputStream(num+".ser"); // 직렬화해서 썼던 파일을 다시 읽오는 역할
 				ObjectInputStream is = new ObjectInputStream(fileStream); // 읽어온 직렬화된 내용을 역직렬화 하는 역할
-
 				user = (User)is.readObject(); 
-				} catch (ClassNotFoundException o) {
-		            o.printStackTrace();
-		        } catch (IOException n) {
-		            n.printStackTrace();
-		        }
-				
 				String check = user.getPassword();
-				
 				
 				String password = password3.getText();
 
@@ -136,6 +128,15 @@ class Login extends JFrame{
 					l = new LoginError();
 
 				}
+
+				
+				} catch(FileNotFoundException k){
+		        	FileNotFound f = new FileNotFound();
+		        } catch (Exception x){
+		        	x.printStackTrace();
+		        }
+				
+				
 			}
 		});
 
@@ -146,8 +147,7 @@ class Login extends JFrame{
 		
 	}
 	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 
 		Login login = new Login();
 
