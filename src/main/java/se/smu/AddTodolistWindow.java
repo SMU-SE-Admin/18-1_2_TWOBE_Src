@@ -113,7 +113,7 @@ public class AddTodolistWindow extends JFrame{
 				String tdlFinishDate=todoFinishDate2.getText();
 				Boolean tdlCompleted=Boolean.valueOf(todoCompleted2.getText()).booleanValue();
 				Boolean tdlImportant=Boolean.valueOf(todoImportant2.getText()).booleanValue();
-				if(tdlName.equals("")||tdlDeadline.equals("")||tdlFinishDate.equals("")){
+				if(tdlName.equals("")||tdlDeadline.equals("")){
 					AddConfirm l=new AddConfirm(st);
 				}
 				else if(!todoCompleted2.getText().equals("true") &&!todoCompleted2.getText().equals("false")){
