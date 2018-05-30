@@ -116,18 +116,30 @@ public class EditSubjectWindow extends JFrame{
 		// 수강과목 편집
 		subjectConfirm.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				String subjectName = subjectName2.getText();
-				String professer = subjectProf2.getText();
-				String subjectDay = subjectDay2.getText();
-				int subjectTime = Integer.parseInt(subjectTime2.getText());
-				int runYear = Integer.parseInt(subjectYear2.getText());
-				int semester = Integer.parseInt(subjectSemester2.getText());
+				 try{
+		               String subUrl=st.subUrl;
+		               String subjectName=subjectName2.getText();
+		               String professer=subjectProf2.getText();
+		               String subjectDay=subjectDay2.getText();
+		               int subjectTime=Integer.parseInt(subjectTime2.getText());
+		               int runYear=Integer.parseInt(subjectYear2.getText());
+		               int semester=Integer.parseInt(subjectSemester2.getText());
+		               
+		               
+		               
+		               EditSubjectConfirm l = new EditSubjectConfirm(st,subjectName,professer,subjectDay,subjectTime,runYear,semester,i);
+		               dispose();
+		            
+		            }catch(NumberFormatException l){
+		                AddSubjectConfirm2  k = new AddSubjectConfirm2(st);
+		            }
+		         
+		            
+		         }
+		      });
 				
-				EditSubjectConfirm l = new EditSubjectConfirm(st,subjectName,professer,subjectDay,subjectTime,runYear,semester,i);
-				dispose();
-				
-			}
-		});
+			
+		
 	}
 	
 	
