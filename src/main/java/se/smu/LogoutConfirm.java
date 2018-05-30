@@ -6,7 +6,13 @@ import java.awt.event.*;
 
 public class LogoutConfirm extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
-	
+	Boolean check;
+	public  Boolean getCheck(){
+		return check;
+	}
+	public void setCheck(Boolean check){
+		this.check=check;
+	}
 	public LogoutConfirm() {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -41,6 +47,21 @@ public class LogoutConfirm extends JFrame{
 		
 		setSize(520, 290);
 		setVisible(true);
+		btn1.addActionListener(new ActionListener() {
+			public  void actionPerformed(ActionEvent e)  {
+				Login l = new Login();
+				dispose();
+			   System.exit(0);
+				
+			}
+		});
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)  {
+				
+				dispose();
+			}
+		});
+		
 	}
 
 

@@ -390,8 +390,8 @@ public class AddSubject2 extends JFrame{
 		// 로그아웃
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
-				Login l = new Login();
-				dispose();
+				LogoutConfirm l = new LogoutConfirm();
+				
 			}
 		});
 		
