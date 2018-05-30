@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class AddSubjectConfirm extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	
-	public AddSubjectConfirm() {
+	public AddSubjectConfirm(Student st) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -41,6 +41,21 @@ public class AddSubjectConfirm extends JFrame{
 		
 		setSize(520, 290);
 		setVisible(true);
+		btn1.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				AddSubjectWindow l = new AddSubjectWindow(st);
+				dispose();
+				
+			}
+		});
+		
+		btn2.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				AddSubject2 l = new AddSubject2(st);
+				dispose();
+				
+			}
+		});
 	}
 	
 }

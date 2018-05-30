@@ -404,17 +404,17 @@ public class AddSubject2 extends JFrame{
 		});
 		setSize(1080, 960);
 		setVisible(true);
-
+		
 		// 수강과목 추가
 		subjectplus.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				AddSubjectWindow asw = new AddSubjectWindow(st);
+				AddSubjectConfirm asw = new AddSubjectConfirm(st);
 				dispose();
 				
 			}
 		});
 		
-		
+				
 		// 수강과목 편집
 		subjectedit1.addActionListener(new EditListener(0));
 		subjectedit2.addActionListener(new EditListener(1));
@@ -455,7 +455,7 @@ public class AddSubject2 extends JFrame{
 			if (st.getSarrName(i)==null){
 				AddTodoConfirm2 l = new AddTodoConfirm2(st);
 			}else{
-				AddTodolistWindow l=new AddTodolistWindow(st,i);
+				AddTodoConfirm l=new AddTodoConfirm(st,i);
 				
 			}
 			dispose();
