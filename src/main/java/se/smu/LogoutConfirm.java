@@ -20,7 +20,6 @@ public class LogoutConfirm extends JFrame{
 		Container c = getContentPane();
 		c.setBackground(new Color(184,255,255));
 		c.setLayout(null);
-		
 	
 		JLabel title = new JLabel("로그아웃 하시겠습니까?");
 		c.add(title);
