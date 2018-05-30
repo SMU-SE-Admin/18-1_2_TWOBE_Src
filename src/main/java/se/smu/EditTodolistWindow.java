@@ -109,14 +109,29 @@ public class EditTodolistWindow extends JFrame{
 				String tdlCompleted = todoCompleted2.getText();
 				String tdlImportant = todoImportant2.getText();
 				
-				boolean Com = (tdlCompleted.equals("O")) ? true : false;
-				boolean Imp = (tdlImportant.equals("O")) ? true : false;
-				
-				EditTodoConfirm l = new EditTodoConfirm(st,tdlName, tdlDeadline, tdlFinishDate, Com, Imp, i);
-				dispose();
-				
+				boolean Com =Boolean.valueOf(todoCompleted2.getText()).booleanValue();
+				boolean Imp =Boolean.valueOf(todoCompleted2.getText()).booleanValue();
+				if(tdlName.equals("")||tdlDeadline.equals("")){
+					AddConfirm l=new AddConfirm(st);
+				}
+				else if(!todoCompleted2.getText().equals("true") &&!todoCompleted2.getText().equals("false")){
+					AddTodoConfirm3 l=new AddTodoConfirm3(st);
+					
+				}
+				else if(!todoImportant2.getText().equals("true") &&!todoImportant2.getText().equals("false")){
+					AddTodoConfirm3 l=new AddTodoConfirm3(st);
+				}
+			
+				else {
+					EditTodoConfirm l = new EditTodoConfirm(st,tdlName, tdlDeadline, tdlFinishDate, Com, Imp, i);
+			
+			  
+					dispose();
+				}
+		
 			}
 		});
+			
 		
 		//취소 
 		todoCancel.addActionListener(new ActionListener(){
