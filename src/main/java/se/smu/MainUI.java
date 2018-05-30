@@ -44,11 +44,7 @@ public class MainUI extends JFrame{
 		btn2.setBackground(new Color(255,255,255));
 		ImageIcon image = new ImageIcon("images/pic1.png");
 
-		JButton todofavor = new JButton("즐겨찾기(我的最爱)");
-		c.add(todofavor);
-		todofavor.setLocation(20,80);
-		todofavor.setSize(170,40);
-		todofavor.setBackground(new Color(255,255,255));		
+			
 		JButton SubjectName = new JButton("과목명(课程名称)");
 		c.add(SubjectName);
 		SubjectName.setLocation(220,80);
@@ -96,11 +92,11 @@ public class MainUI extends JFrame{
 				text1.setText("");
 			}else{
 				text1.setText(st.getTarrName(i));
+				
 			}
          i++;
 		}
-
-		JButton todoedit2 = new JButton("편집(汇编)");
+	JButton todoedit2 = new JButton("편집(汇编)");
 		c.add(todoedit2);
 		todoedit2.setLocation(10,300);
 		todoedit2.setSize(95,40);
@@ -334,7 +330,7 @@ public class MainUI extends JFrame{
 		tododel6.addActionListener(new DelListener(5));
 		tododel7.addActionListener(new DelListener(6));
 		
-
+	
 	      //과목명 정렬
 	      SubjectName.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e)  {

@@ -408,7 +408,7 @@ public class AddSubject2 extends JFrame{
 		// 수강과목 추가
 		subjectplus.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				AddSubjectWindow asw = new AddSubjectWindow(st);
+				AddSubjectWindow l=new AddSubjectWindow(st);
 				dispose();
 				
 			}

@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class AddTodoConfirm extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
 	
-	public AddTodoConfirm(Student st,String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant) {
+	public AddTodoConfirm(Student st, int i,String tdlUrl,String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant) {
 		setTitle("To do list");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -44,8 +44,8 @@ public class AddTodoConfirm extends JFrame{
 		
 		btn1.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				st.add_tdl(subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
-				MainUI l = new MainUI(st);
+				st.add_tdl(tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
+				MainUI m=new MainUI(st);
 				dispose();
 				
 			}
