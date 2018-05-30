@@ -234,7 +234,7 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text3.setText("");
 			}else{
-				text1.setText(st.getTarrName(i));
+				text3.setText(st.getTarrName(i));
 				todoDeadline3.setText(st.getDaeadline(i));
 				todoFinishDate3.setText(st.getFinishDate(i));
 				todoCompleted3.setText(st.getCompleted(i));
@@ -284,7 +284,7 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text4.setText("");
 			}else{
-				text1.setText(st.getTarrName(i));
+				text4.setText(st.getTarrName(i));
 				todoDeadline4.setText(st.getDaeadline(i));
 				todoFinishDate4.setText(st.getFinishDate(i));
 				todoCompleted4.setText(st.getCompleted(i));
@@ -335,7 +335,7 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text5.setText("");
 			}else{
-				text1.setText(st.getTarrName(i));
+				text5.setText(st.getTarrName(i));
 				todoDeadline5.setText(st.getDaeadline(i));
 				todoFinishDate5.setText(st.getFinishDate(i));
 				todoCompleted5.setText(st.getCompleted(i));
@@ -385,7 +385,7 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text6.setText("");
 			}else{
-				text1.setText(st.getTarrName(i));
+				text6.setText(st.getTarrName(i));
 				todoDeadline6.setText(st.getDaeadline(i));
 				todoFinishDate6.setText(st.getFinishDate(i));
 				todoCompleted6.setText(st.getCompleted(i));
@@ -435,7 +435,7 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text7.setText("");
 			}else{
-				text1.setText(st.getTarrName(i));
+				text7.setText(st.getTarrName(i));
 				todoDeadline7.setText(st.getDaeadline(i));
 				todoFinishDate7.setText(st.getFinishDate(i));
 				todoCompleted7.setText(st.getCompleted(i));
