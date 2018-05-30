@@ -27,6 +27,24 @@ public class Student{
 	public int getSN(){
 		return this.StudentNum;
 	}
+	public String getDaeadline(int i){
+		return this.t_arr[i].gettdlDeadline();
+		
+	}
+	public String getFinishDate(int i){
+		return this.t_arr[i].gettdlFinishDate();
+		
+	}
+	public String getCompleted(int i){
+		String cm=String.valueOf(this.t_arr[i].gettdlCompleted()) ;
+		return cm;
+		
+	}
+	public String getImportant(int i){
+		String im=String.valueOf(this.t_arr[i].gettdlImportant());
+		return im;
+		
+	}
 	
 	public int getcount(){
 		return this.t_arrcount;

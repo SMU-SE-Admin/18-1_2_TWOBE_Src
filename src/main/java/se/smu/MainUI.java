@@ -134,6 +134,11 @@ public class MainUI extends JFrame{
 				text1.setText("");
 			}else{
 				text1.setText(st.getTarrName(i));
+				todoDeadline1.setText(st.getDaeadline(i));
+				todoFinishDate1.setText(st.getFinishDate(i));
+				todoCompleted1.setText(st.getCompleted(i));
+				todoImportant1.setText(st.getImportant(i));
+				
 			}
          i++;
 		}
@@ -179,6 +184,11 @@ public class MainUI extends JFrame{
 				text2.setText("");
 			}else{
 				text2.setText(st.getTarrName(i));
+				todoDeadline2.setText(st.getDaeadline(i));
+				todoFinishDate2.setText(st.getFinishDate(i));
+				todoCompleted2.setText(st.getCompleted(i));
+				todoImportant2.setText(st.getImportant(i));
+				
 			}
          i++;
 		}
@@ -224,7 +234,12 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text3.setText("");
 			}else{
-				text3.setText(st.getTarrName(i));
+				text1.setText(st.getTarrName(i));
+				todoDeadline3.setText(st.getDaeadline(i));
+				todoFinishDate3.setText(st.getFinishDate(i));
+				todoCompleted3.setText(st.getCompleted(i));
+				todoImportant3.setText(st.getImportant(i));
+				
 			}
          i++;
 		}
@@ -269,7 +284,12 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text4.setText("");
 			}else{
-				text4.setText(st.getTarrName(i));
+				text1.setText(st.getTarrName(i));
+				todoDeadline4.setText(st.getDaeadline(i));
+				todoFinishDate4.setText(st.getFinishDate(i));
+				todoCompleted4.setText(st.getCompleted(i));
+				todoImportant4.setText(st.getImportant(i));
+				
 			}
          i++;
 		}
@@ -315,7 +335,12 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text5.setText("");
 			}else{
-				text5.setText(st.getTarrName(i));
+				text1.setText(st.getTarrName(i));
+				todoDeadline5.setText(st.getDaeadline(i));
+				todoFinishDate5.setText(st.getFinishDate(i));
+				todoCompleted5.setText(st.getCompleted(i));
+				todoImportant5.setText(st.getImportant(i));
+				
 			}
          i++;
 		}
@@ -360,7 +385,12 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text6.setText("");
 			}else{
-				text6.setText(st.getTarrName(i));
+				text1.setText(st.getTarrName(i));
+				todoDeadline6.setText(st.getDaeadline(i));
+				todoFinishDate6.setText(st.getFinishDate(i));
+				todoCompleted6.setText(st.getCompleted(i));
+				todoImportant6.setText(st.getImportant(i));
+				
 			}
          i++;
 		}
@@ -405,7 +435,12 @@ public class MainUI extends JFrame{
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text7.setText("");
 			}else{
-				text7.setText(st.getTarrName(i));
+				text1.setText(st.getTarrName(i));
+				todoDeadline7.setText(st.getDaeadline(i));
+				todoFinishDate7.setText(st.getFinishDate(i));
+				todoCompleted7.setText(st.getCompleted(i));
+				todoImportant7.setText(st.getImportant(i));
+				
 			}
          i++;
 		}
