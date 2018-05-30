@@ -123,10 +123,23 @@ public class AddSubjectWindow extends JFrame{
 				int subjectTime=Integer.parseInt(subjectTime2.getText());
 				int runYear=Integer.parseInt(subjectYear2.getText());
 				int semester=Integer.parseInt(subjectSemester2.getText());
-				st.add_sub(subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
-				
-				AddSubject2 as2= new AddSubject2(st);
-				dispose();
+				//여기부터 수정
+//				try{
+//					if(subjectName.equals("")||professer.equals("")||subjectDay.equals("")||subjectTime2.getText().equals("")
+//							||subjectYear2.getText().equals("")||subjectSemester2.getText().equals("")){
+//						AddConfirm l=new AddConfirm(st);
+//					}
+//					else{
+//					st.add_sub(subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
+//					
+//					AddSubject2 as2= new AddSubject2(st);
+//					dispose();
+//					}
+//				
+//				}catch(NumberFormatException o){
+//					AddSubjectConfirm2 l=new AddSubjectConfirm2(st);
+//				}
+			
 				
 			}
 		});

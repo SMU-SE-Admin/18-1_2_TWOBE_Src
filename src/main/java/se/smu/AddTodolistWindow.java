@@ -67,7 +67,7 @@ public class AddTodolistWindow extends JFrame{
 		todoFinishDate2.setBackground(new Color(255,255,255));
 		c.add(todoFinishDate2);
 		
-		JLabel todoCompleted = new JLabel("완료여부(狀態完成)(only true or false!)");
+		JLabel todoCompleted = new JLabel("완료여부(狀態完成)");
 		todoCompleted.setLocation(100,220);
 		todoCompleted.setSize(150,40);
 		todoCompleted.setBackground(new Color(255,255,255));
@@ -77,7 +77,8 @@ public class AddTodolistWindow extends JFrame{
 		todoCompleted2.setSize(650,40);
 		todoCompleted2.setBackground(new Color(255,255,255));
 		c.add(todoCompleted2);
-		JLabel todoImportant = new JLabel("중요여부(也罷)(only true or false!)");
+		
+		JLabel todoImportant = new JLabel("중요여부(也罷)");
 		todoImportant.setLocation(100,270);
 		todoImportant.setSize(150,40);
 		todoImportant.setBackground(new Color(255,255,255));
@@ -112,13 +113,23 @@ public class AddTodolistWindow extends JFrame{
 				String tdlFinishDate=todoFinishDate2.getText();
 				Boolean tdlCompleted=Boolean.valueOf(todoCompleted2.getText()).booleanValue();
 				Boolean tdlImportant=Boolean.valueOf(todoImportant2.getText()).booleanValue();
-				
-			    
-			    st.add_tdl(tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
-			    MainUI m=new MainUI(st);
+				if(tdlName.equals("")||tdlDeadline.equals("")||tdlFinishDate.equals("")){
+					AddConfirm l=new AddConfirm(st);
+				}
+				else if(!todoCompleted2.getText().equals("true") &&!todoCompleted2.getText().equals("false")){
+					AddTodoConfirm3 l=new AddTodoConfirm3(st);
+					
+				}
+				else if(!todoImportant2.getText().equals("true") &&!todoImportant2.getText().equals("false")){
+					AddTodoConfirm3 l=new AddTodoConfirm3(st);
+				}
+			
+				else {
+					st.add_tdl(tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
+					MainUI m=new MainUI(st);
 			  
-			    dispose();
-			    
+					dispose();
+				}
 		
 			}
 		});
@@ -134,4 +145,3 @@ public class AddTodolistWindow extends JFrame{
 	}
 	
 }
-
