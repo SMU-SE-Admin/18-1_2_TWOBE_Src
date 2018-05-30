@@ -21,7 +21,7 @@ public class MainUI extends JFrame{
 		c.setLayout(null);
 		JPanel wl = new JPanel();
 		c.add(wl);
-		wl.setSize(1080, 3);
+		wl.setSize(1300, 3);
 		wl.setLocation(0,60);
 		wl.setBackground(new Color(255,255,255));
 		
@@ -34,7 +34,7 @@ public class MainUI extends JFrame{
 		
 		JButton btn1 = new JButton("로그아웃(退出)");
 		c.add(btn1);
-		btn1.setLocation(930,10);
+		btn1.setLocation(1130,10);
 		btn1.setSize(120,25);
 		btn1.setBackground(new Color(255,255,255));
 		JButton btn2 = new JButton("수강과목(课程)");
@@ -43,8 +43,7 @@ public class MainUI extends JFrame{
 		btn2.setSize(120,25);
 		btn2.setBackground(new Color(255,255,255));
 		ImageIcon image = new ImageIcon("images/pic1.png");
-
-			
+	
 		JButton SubjectName = new JButton("과목명(课程名称)");
 		c.add(SubjectName);
 		SubjectName.setLocation(220,80);
@@ -65,7 +64,33 @@ public class MainUI extends JFrame{
 		todolistCompleted.setLocation(830,80);
 		todolistCompleted.setSize(190,40);
 		todolistCompleted.setBackground(new Color(255,255,255));
-
+		
+		
+		JLabel todoName = new JLabel("항목이름(項目名稱)");
+		todoName.setLocation(360,150);
+		todoName.setSize(150,40);
+		todoName.setBackground(new Color(255,255,255));
+		c.add(todoName);
+		JLabel todoDeadline = new JLabel("마감기한(期限)");
+		todoDeadline.setLocation(600,150);
+		todoDeadline.setSize(200,40);
+		todoDeadline.setBackground(new Color(255,255,255));
+		c.add(todoDeadline);
+		JLabel todoFinishDate = new JLabel("실제마감일(實際截止日期)");
+		todoFinishDate.setLocation(750,150);
+		todoFinishDate.setSize(200,40);
+		todoFinishDate.setBackground(new Color(255,255,255));
+		c.add(todoFinishDate);
+		JLabel todoCompleted = new JLabel("완료여부(狀態完成)");
+		todoCompleted.setLocation(940,150);
+		todoCompleted.setSize(200,40);
+		todoCompleted.setBackground(new Color(255,255,255));
+		c.add(todoCompleted);
+		JLabel todoImportant = new JLabel("중요여부(也罷)");
+		todoImportant.setLocation(1120,150);
+		todoImportant.setSize(200,40);
+		todoImportant.setBackground(new Color(255,255,255));
+		c.add(todoImportant);
 		
 		
 		JButton todoedit1 = new JButton("편집(汇编)");
@@ -83,20 +108,37 @@ public class MainUI extends JFrame{
 		label1.setLocation(240, 196);
 		label1.setSize(50,50);
 		JTextField text1 = new JTextField();
+		JTextField todoDeadline1 = new JTextField();
+		JTextField todoFinishDate1 = new JTextField();
+		JTextField todoCompleted1 = new JTextField();
+		JTextField todoImportant1 = new JTextField();
 		c.add(text1);
+		c.add(todoDeadline1);
+		c.add(todoFinishDate1);
+		c.add(todoCompleted1);
+		c.add(todoImportant1);
 		text1.setLocation(350, 196);
-		text1.setSize(600,50);
+		text1.setSize(180,50);
+		todoDeadline1.setLocation(590, 196);
+		todoDeadline1.setSize(130,50);
+		todoFinishDate1.setLocation(760, 196);
+		todoFinishDate1.setSize(130,50);
+		todoCompleted1.setLocation(930, 196);
+		todoCompleted1.setSize(130,50);
+		todoImportant1.setLocation(1100, 196);
+		todoImportant1.setSize(130,50);
+
 		if(st.t_arr[i]!=null){
             // 완료항목 숨기기여부 체크   // 
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
 				text1.setText("");
 			}else{
 				text1.setText(st.getTarrName(i));
-				
 			}
          i++;
 		}
-	JButton todoedit2 = new JButton("편집(汇编)");
+
+		JButton todoedit2 = new JButton("편집(汇编)");
 		c.add(todoedit2);
 		todoedit2.setLocation(10,300);
 		todoedit2.setSize(95,40);
@@ -111,6 +153,26 @@ public class MainUI extends JFrame{
 		label2.setLocation(240, 296);
 		label2.setSize(50,50);
 		JTextField text2 = new JTextField();
+		JTextField todoDeadline2 = new JTextField();
+		JTextField todoFinishDate2 = new JTextField();
+		JTextField todoCompleted2 = new JTextField();
+		JTextField todoImportant2 = new JTextField();
+		c.add(text2);
+		c.add(todoDeadline2);
+		c.add(todoFinishDate2);
+		c.add(todoCompleted2);
+		c.add(todoImportant2);
+		text2.setLocation(350, 296);
+		text2.setSize(180,50);
+		todoDeadline2.setLocation(590, 296);
+		todoDeadline2.setSize(130,50);
+		todoFinishDate2.setLocation(760, 296);
+		todoFinishDate2.setSize(130,50);
+		todoCompleted2.setLocation(930, 296);
+		todoCompleted2.setSize(130,50);
+		todoImportant2.setLocation(1100, 296);
+		todoImportant2.setSize(130,50);
+
 		if(st.t_arr[i]!=null){
             // 완료항목 숨기기여부 체크   // 
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
@@ -120,9 +182,7 @@ public class MainUI extends JFrame{
 			}
          i++;
 		}
-		c.add(text2);
-		text2.setLocation(350, 296);
-		text2.setSize(600,50);
+
 		
 		JButton todoedit3 = new JButton("편집(汇编)");
 		c.add(todoedit3);
@@ -139,6 +199,26 @@ public class MainUI extends JFrame{
 		label3.setLocation(240, 396);
 		label3.setSize(50,50);
 		JTextField text3 = new JTextField();
+		JTextField todoDeadline3 = new JTextField();
+		JTextField todoFinishDate3 = new JTextField();
+		JTextField todoCompleted3 = new JTextField();
+		JTextField todoImportant3 = new JTextField();
+		c.add(text3);
+		c.add(todoDeadline3);
+		c.add(todoFinishDate3);
+		c.add(todoCompleted3);
+		c.add(todoImportant3);
+		text3.setLocation(350, 396);
+		text3.setSize(180,50);
+		todoDeadline3.setLocation(590, 396);
+		todoDeadline3.setSize(130,50);
+		todoFinishDate3.setLocation(760, 396);
+		todoFinishDate3.setSize(130,50);
+		todoCompleted3.setLocation(930, 396);
+		todoCompleted3.setSize(130,50);
+		todoImportant3.setLocation(1100, 396);
+		todoImportant3.setSize(130,50);
+
 		if(st.t_arr[i]!=null){
             // 완료항목 숨기기여부 체크   // 
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
@@ -148,9 +228,7 @@ public class MainUI extends JFrame{
 			}
          i++;
 		}
-		c.add(text3);
-		text3.setLocation(350, 396);
-		text3.setSize(600,50);
+
 		
 		JButton todoedit4 = new JButton("편집(汇编)");
 		c.add(todoedit4);
@@ -167,6 +245,25 @@ public class MainUI extends JFrame{
 		label4.setLocation(240, 496);
 		label4.setSize(50,50);
 		JTextField text4 = new JTextField();
+		JTextField todoDeadline4 = new JTextField();
+		JTextField todoFinishDate4 = new JTextField();
+		JTextField todoCompleted4 = new JTextField();
+		JTextField todoImportant4 = new JTextField();
+		c.add(text4);
+		c.add(todoDeadline4);
+		c.add(todoFinishDate4);
+		c.add(todoCompleted4);
+		c.add(todoImportant4);
+		text4.setLocation(350, 496);
+		text4.setSize(180,50);
+		todoDeadline4.setLocation(590, 496);
+		todoDeadline4.setSize(130,50);
+		todoFinishDate4.setLocation(760, 496);
+		todoFinishDate4.setSize(130,50);
+		todoCompleted4.setLocation(930, 496);
+		todoCompleted4.setSize(130,50);
+		todoImportant4.setLocation(1100, 496);
+		todoImportant4.setSize(130,50);
 		if(st.t_arr[i]!=null){
             // 완료항목 숨기기여부 체크   // 
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
@@ -176,9 +273,7 @@ public class MainUI extends JFrame{
 			}
          i++;
 		}
-		c.add(text4);
-		text4.setLocation(350, 496);
-		text4.setSize(600,50);
+
 		
 		JButton todoedit5 = new JButton("편집(汇编)");
 		c.add(todoedit5);
@@ -195,6 +290,26 @@ public class MainUI extends JFrame{
 		label5.setLocation(240, 596);
 		label5.setSize(50,50);
 		JTextField text5 = new JTextField();
+		JTextField todoDeadline5 = new JTextField();
+		JTextField todoFinishDate5 = new JTextField();
+		JTextField todoCompleted5 = new JTextField();
+		JTextField todoImportant5 = new JTextField();
+		c.add(text5);
+		c.add(todoDeadline5);
+		c.add(todoFinishDate5);
+		c.add(todoCompleted5);
+		c.add(todoImportant5);
+		text5.setLocation(350, 596);
+		text5.setSize(180,50);
+		todoDeadline5.setLocation(590, 596);
+		todoDeadline5.setSize(130,50);
+		todoFinishDate5.setLocation(760, 596);
+		todoFinishDate5.setSize(130,50);
+		todoCompleted5.setLocation(930, 596);
+		todoCompleted5.setSize(130,50);
+		todoImportant5.setLocation(1100, 596);
+		todoImportant5.setSize(130,50);
+
 		if(st.t_arr[i]!=null){
             // 완료항목 숨기기여부 체크   // 
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
@@ -204,9 +319,7 @@ public class MainUI extends JFrame{
 			}
          i++;
 		}
-		c.add(text5);
-		text5.setLocation(350, 596);
-		text5.setSize(600,50);
+
 		
 		JButton todoedit6 = new JButton("편집(汇编)");
 		c.add(todoedit6);
@@ -223,6 +336,25 @@ public class MainUI extends JFrame{
 		label6.setLocation(240, 696);
 		label6.setSize(50,50);
 		JTextField text6 = new JTextField();
+		JTextField todoDeadline6 = new JTextField();
+		JTextField todoFinishDate6 = new JTextField();
+		JTextField todoCompleted6 = new JTextField();
+		JTextField todoImportant6 = new JTextField();
+		c.add(text6);
+		c.add(todoDeadline6);
+		c.add(todoFinishDate6);
+		c.add(todoCompleted6);
+		c.add(todoImportant6);
+		text6.setLocation(350, 696);
+		text6.setSize(180,50);
+		todoDeadline6.setLocation(590, 696);
+		todoDeadline6.setSize(130,50);
+		todoFinishDate6.setLocation(760, 696);
+		todoFinishDate6.setSize(130,50);
+		todoCompleted6.setLocation(930, 696);
+		todoCompleted6.setSize(130,50);
+		todoImportant6.setLocation(1100, 696);
+		todoImportant6.setSize(130,50);
 		if(st.t_arr[i]!=null){
             // 완료항목 숨기기여부 체크   // 
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
@@ -232,9 +364,7 @@ public class MainUI extends JFrame{
 			}
          i++;
 		}
-		c.add(text6);
-		text6.setLocation(350, 696);
-		text6.setSize(600,50);
+
 		
 		JButton todoedit7 = new JButton("편집(汇编)");
 		c.add(todoedit7);
@@ -251,6 +381,25 @@ public class MainUI extends JFrame{
 		label7.setLocation(240, 796);
 		label7.setSize(50,50);
 		JTextField text7 = new JTextField();
+		JTextField todoDeadline7 = new JTextField();
+		JTextField todoFinishDate7 = new JTextField();
+		JTextField todoCompleted7 = new JTextField();
+		JTextField todoImportant7 = new JTextField();
+		c.add(text7);
+		c.add(todoDeadline7);
+		c.add(todoFinishDate7);
+		c.add(todoCompleted7);
+		c.add(todoImportant7);
+		text7.setLocation(350, 796);
+		text7.setSize(180,50);
+		todoDeadline7.setLocation(590, 796);
+		todoDeadline7.setSize(130,50);
+		todoFinishDate7.setLocation(760, 796);
+		todoFinishDate7.setSize(130,50);
+		todoCompleted7.setLocation(930, 796);
+		todoCompleted7.setSize(130,50);
+		todoImportant7.setLocation(1100, 796);
+		todoImportant7.setSize(130,50);
 		if(st.t_arr[i]!=null){
             // 완료항목 숨기기여부 체크   // 
 			if (st.getBoolean() && st.t_arr[i].gettdlCompleted()){
@@ -260,24 +409,20 @@ public class MainUI extends JFrame{
 			}
          i++;
 		}
-		c.add(text7);
-		text7.setLocation(350, 796);
-		text7.setSize(600,50);
+
 		
 		JCheckBox hideTodo = new JCheckBox("  완료된 To do 항목 숨기기");
 		c.add(hideTodo);
-		hideTodo.setLocation(850, 850);
+		hideTodo.setLocation(1050, 850);
 		hideTodo.setSize(200, 50);
 		hideTodo.setBackground(new Color(184,255,255));
 		
 		JLabel hideTodo2 = new JLabel("(已完成 To-do list 藏)");
 		c.add(hideTodo2);
-		hideTodo2.setLocation(890, 880);
+		hideTodo2.setLocation(1080, 880);
 		hideTodo2.setSize(300,50);
 		
-		
-		
-		setSize(1080, 960);
+		setSize(1300, 960);
 		setVisible(true);
 		//완료항목 숨기기
 	     hideTodo.addItemListener(new ItemListener() {
@@ -330,7 +475,7 @@ public class MainUI extends JFrame{
 		tododel6.addActionListener(new DelListener(5));
 		tododel7.addActionListener(new DelListener(6));
 		
-	
+
 	      //과목명 정렬
 	      SubjectName.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e)  {
