@@ -106,7 +106,6 @@ public class AddTodolistWindow extends JFrame{
 		todoConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				String tdlUrl=st.tdlUrl;
 				String subjectName=st.getSarrName(i);
 				String tdlName=todoName2.getText();
 				String tdlDeadline=todoDeadline2.getText();
@@ -125,9 +124,7 @@ public class AddTodolistWindow extends JFrame{
 				}
 			
 				else {
-					st.add_tdl(tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
-					MainUI m=new MainUI(st);
-			  
+					AddTodoConfirm m = new AddTodoConfirm(st,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
 					dispose();
 				}
 		

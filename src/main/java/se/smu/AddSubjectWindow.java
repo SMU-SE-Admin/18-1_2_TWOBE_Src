@@ -126,9 +126,7 @@ public class AddSubjectWindow extends JFrame{
                int runYear=Integer.parseInt(subjectYear2.getText());
                int semester=Integer.parseInt(subjectSemester2.getText());
                
-               st.add_sub(subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
-               
-               AddSubject2 as2= new AddSubject2(st);
+               AddSubjectConfirm as2= new AddSubjectConfirm(st,subjectName, professer, subjectDay, subjectTime, runYear, semester);
                dispose();
             
             }catch(NumberFormatException l){

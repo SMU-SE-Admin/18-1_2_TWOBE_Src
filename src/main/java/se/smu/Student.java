@@ -61,7 +61,7 @@ public class Student{
      }
 
 	//subject
-	public void add_sub(String s,String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester){
+	public void add_sub(String subjectName,String professer,String subjectDay,int subjectTime,int runYear, int semester){
 	      Subject sub = AddSubject.add(this.subUrl,subjectName, professer, subjectDay, subjectTime, runYear, semester);
 	      this.s_arr[this.s_arrcount] = sub;
 	      this.s_arrcount++;
@@ -79,7 +79,7 @@ public class Student{
 	}
 
 	//todo
-	public void add_tdl(String s,String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant){
+	public void add_tdl(String subjectName,String tdlName,String tdlDeadline,String tdlFinishDate,Boolean tdlCompleted,Boolean tdlImportant){
 		Todolist todo = Todo_AddTodolist.add(this.tdlUrl,subjectName,tdlName,tdlDeadline,tdlFinishDate,tdlCompleted,tdlImportant);
 		this.t_arr[this.t_arrcount] = todo;
 		this.t_arrcount++;

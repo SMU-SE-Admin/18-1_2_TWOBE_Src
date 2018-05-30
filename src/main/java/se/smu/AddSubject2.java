@@ -408,7 +408,7 @@ public class AddSubject2 extends JFrame{
 		// 수강과목 추가
 		subjectplus.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				AddSubjectConfirm asw = new AddSubjectConfirm(st);
+				AddSubjectWindow asw = new AddSubjectWindow(st);
 				dispose();
 				
 			}
@@ -455,7 +455,7 @@ public class AddSubject2 extends JFrame{
 			if (st.getSarrName(i)==null){
 				AddTodoConfirm2 l = new AddTodoConfirm2(st);
 			}else{
-				AddTodoConfirm l=new AddTodoConfirm(st,i);
+				AddTodolistWindow l=new AddTodolistWindow(st,i);
 				
 			}
 			dispose();
