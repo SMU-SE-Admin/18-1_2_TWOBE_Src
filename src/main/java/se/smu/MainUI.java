@@ -478,7 +478,7 @@ public class MainUI extends JFrame{
 		// 로그아웃
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
-				Login l = new Login();
+				LogoutConfirm l = new LogoutConfirm();
 				dispose();
 			}
 		});
