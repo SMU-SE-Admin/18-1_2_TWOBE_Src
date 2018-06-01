@@ -106,11 +106,10 @@ public class EditTodolistWindow extends JFrame{
 				String tdlName = todoName2.getText();
 				String tdlDeadline = todoDeadline2.getText();
 				String tdlFinishDate = todoFinishDate2.getText();
-				String tdlCompleted = todoCompleted2.getText();
-				String tdlImportant = todoImportant2.getText();
+
 				
 				boolean Com =Boolean.valueOf(todoCompleted2.getText()).booleanValue();
-				boolean Imp =Boolean.valueOf(todoCompleted2.getText()).booleanValue();
+				boolean Imp =Boolean.valueOf(todoImportant2.getText()).booleanValue();
 				if(tdlName.equals("")||tdlDeadline.equals("")){
 					AddConfirm l=new AddConfirm(st);
 				}
