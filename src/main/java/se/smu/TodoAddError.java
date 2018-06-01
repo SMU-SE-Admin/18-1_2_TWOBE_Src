@@ -5,8 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class TodoAddError extends JFrame{
-	//private Font f = new Font("돋움", Font.BOLD, 20);
-	
+
 	public TodoAddError() {
 		setTitle("실행 오류");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

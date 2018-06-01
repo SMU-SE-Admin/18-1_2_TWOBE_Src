@@ -23,12 +23,8 @@ public class AddConfirm extends JFrame{
 		title.setFont(f);
 		JLabel title2 = new JLabel("(请不要空记额,请输入)");
 		c.add(title2);
-//		JLabel title3 = new JLabel("(是否重要,请输入True/false false格式。)");
-//		c.add(title3);
 		title2.setLocation(100, 80);
 		title2.setSize(500,40);
-//		title3.setLocation(100,100);
-//		title3.setSize(500,40);
 
 		
 		JButton btn1 = new JButton("네(是)");

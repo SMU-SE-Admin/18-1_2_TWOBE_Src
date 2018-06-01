@@ -9,8 +9,7 @@ import java.io.ObjectInputStream;
 
 public class FindPassword extends JFrame{
 	private Font f = new Font("돋움", Font.BOLD, 20);
-	//private Font f2 = new Font("돋움", Font.BOLD, 9);
-	
+
 	public FindPassword() {
 		setTitle("To do list");
 		
@@ -88,7 +87,7 @@ public class FindPassword extends JFrame{
 		
 		todoConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
-				MainUI m; //수정 시작
+				MainUI m; 
 				FindPasswordError l;
 				JButton btn2 = (JButton)e.getSource();
 				AddUser main = new AddUser();
@@ -117,7 +116,7 @@ public class FindPassword extends JFrame{
 					l = new FindPasswordError();
 
 				}					      
-			} //수정 끝
+			} 
 		});
 		
 		todoCancel.addActionListener(new ActionListener() {

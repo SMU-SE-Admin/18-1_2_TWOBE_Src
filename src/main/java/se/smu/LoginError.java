@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class LoginError extends JFrame{
-	//private Font f = new Font("돋움", Font.BOLD, 20);
+
 	
 	public LoginError() {
 		setTitle("실행 오류");

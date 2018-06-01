@@ -10,23 +10,6 @@ public class AddUser {
 	 
     private String filePath;
     private User user;
-//    public static void main(String[] args){
-         
-//    	AddUser main = new AddUser();
-//       try {
-//            main.init();
-//            main.doSerializable();
-//            User user = (User) main.undoSerializable();
-//             
-           // System.out.println(user.getStudentName());
-//
-//             
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
      
     public void init(String num, String a, String b, String c, String d) {
  
@@ -38,10 +21,6 @@ public class AddUser {
         user.setMajor(b);
         user.setPassword(c);
         user.setQues(d);
-       // user.setName("kim dong");
-       // user.setAge(50);
-       // user.setPhoneNumber("010-9858-9985");
-        
         filePath = num+".ser";
     }
      

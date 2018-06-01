@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class SubjectAddError extends JFrame{
-	//private Font f = new Font("돋움", Font.BOLD, 20);
+
 	
 	public SubjectAddError() {
 		setTitle("실행 오류");

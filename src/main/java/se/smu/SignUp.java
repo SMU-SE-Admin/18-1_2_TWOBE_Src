@@ -132,7 +132,6 @@ public class SignUp extends JFrame{
 			}
 		});
 
-		//수정한 부분 끝
 		todoCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
 				Login l = new Login();

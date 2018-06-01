@@ -6,7 +6,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class FindPasswordError extends JFrame{
-	//private Font f = new Font("돋움", Font.BOLD, 20);
 	
 	public FindPasswordError() {
 		setTitle("실행 오류");
