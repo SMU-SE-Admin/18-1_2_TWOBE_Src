@@ -137,6 +137,15 @@ public class EditSubjectWindow extends JFrame{
 		            
 		         }
 		      });
+		
+	      subjectCancel.addActionListener(new ActionListener(){
+	          public void actionPerformed(ActionEvent e){
+	          
+	             AddSubject2 as2= new AddSubject2(st);
+	             dispose();
+	             
+	          }
+	       });
 				
 			
 		
