@@ -407,6 +407,8 @@ public class AddSubject2 extends JFrame{
 			}
 		});
 		
+		
+		
 				
 		// 수강과목 편집
 		subjectedit1.addActionListener(new EditListener(0));
