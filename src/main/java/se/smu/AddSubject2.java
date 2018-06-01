@@ -466,14 +466,18 @@ public class AddSubject2 extends JFrame{
 		}
 		
 		public void actionPerformed(ActionEvent e){
+			try{
 			if (st.getSarrName(i)==null){
 				AddTodoConfirm2 l = new AddTodoConfirm2(st);
 			}else{
 				EditSubjectWindow l = new EditSubjectWindow(st,i);
 			}
 			dispose();
+		}catch(NullPointerException o){
+			AddTodoConfirm2 l = new AddTodoConfirm2(st);
+			dispose();
 		}
-		
+		}
 	}
 	
 	// 수강과목 삭제
@@ -485,14 +489,18 @@ public class AddSubject2 extends JFrame{
 		}
 		
 		public void actionPerformed(ActionEvent e){
+			try{
 			if (st.getSarrName(i)==null){
 				AddTodoConfirm2 l = new AddTodoConfirm2(st);
 			}else{
 				DeleteSubjectConfirm l = new DeleteSubjectConfirm(st,i);
 			}
 			dispose();
+		}catch(NullPointerException o){
+			AddTodoConfirm2 l = new AddTodoConfirm2(st);
+			dispose();
 		}
-		
+		}
 	}
 
 }

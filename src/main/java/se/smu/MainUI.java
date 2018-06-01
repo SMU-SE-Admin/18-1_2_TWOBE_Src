@@ -561,6 +561,7 @@ public class MainUI extends JFrame{
 		}
 		
 		public void actionPerformed(ActionEvent e) {
+			try{
 			if(st.getTarrName(i)==null){
 				TodoAddFirstError l = new TodoAddFirstError(st);
 			}else{
@@ -568,26 +569,33 @@ public class MainUI extends JFrame{
 				
 			}
 			dispose();
-		}
-	}
-	
-	// 삭제
-	private class DelListener implements ActionListener{
-		int i;
-		
-		public DelListener(int i){
-			this.i = i;
-		}
-		
-		public void actionPerformed(ActionEvent e) {
-			if(st.getTarrName(i)==null){
-				TodoAddFirstError l = new TodoAddFirstError(st);
-			}else{
-				DeleteTodoConfirm l = new DeleteTodoConfirm(st,i);
-			}
+		}catch(NullPointerException o){
+			TodoAddFirstError l = new TodoAddFirstError(st);
 			dispose();
 		}
+	}}
+	
+	// 삭제
+		private class DelListener implements ActionListener{
+			int i;
+			
+			public DelListener(int i){
+				this.i = i;
+			}
+			
+			public void actionPerformed(ActionEvent e) {
+				try{
+				if(st.getTarrName(i)==null){
+					TodoAddFirstError l = new TodoAddFirstError(st);
+				}else{
+					DeleteTodoConfirm l = new DeleteTodoConfirm(st,i);
+				}
+				dispose();
+			}catch(NullPointerException o){
+				TodoAddFirstError l = new TodoAddFirstError(st);
+				dispose();
+			}
+		}}
+
+
 	}
-
-
-}
