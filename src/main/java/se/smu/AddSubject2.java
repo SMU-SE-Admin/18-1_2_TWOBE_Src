@@ -387,14 +387,7 @@ public class AddSubject2 extends JFrame{
 			}
 		});
 		
-		// 로그아웃
-		btn1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e)  {
-				LogoutConfirm l = new LogoutConfirm();
-				
-			}
-		});
-		
+
 		// 메인화면으로
 		btn11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)  {
